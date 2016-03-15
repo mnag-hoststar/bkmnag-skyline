@@ -1,7 +1,7 @@
 {
 	"name":"Skyline",
-	"thumbnail":"skyline.png",
-	"screenshot":"skyline.png",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"skyline-screenshot.png",
 	"templateType":"standard",
 	"pageTypes": ["home", "gallery"],
 	"tags": {
@@ -59,7 +59,7 @@
 		"Swatch 5": {
 			"color1":"#ffffff",
 			"color2":"#f0f2f5",
-			"color3":"#239a95",
+			"color3":"#1597a6",
 			"color4":"#45474c",
 			"color5":"#707075",
 			"color6":"#222224",
