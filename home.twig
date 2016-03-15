@@ -1,0 +1,35 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<div id="wrap">
+	<div class="bk-pt-home">
+		<nav class="bk-nav" id="nav">
+			{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+			{{widget('socialicons', 'social', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+		</nav>
+		<header class="bk-header">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+			{{widget('profile', 'headercompanydescription', {'profileType':'companydescription'})|raw}}
+		</header>
+		<div role="main" id="main">
+			<div class="parallax">
+				<div id="group6" class="parallax_group">
+					<div class="parallax_layer parallax_layer-back">
+						{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
+					</div>
+				</div>
+				<div id="group5" class="parallax_group">
+					<div class="parallax_layer parallax_layer-base">	
+						<div class="contain" id="contain">
+							{{zone('main')|raw}}
+						</div><!--end contain-->
+					</div>
+				</div>
+			</div>
+			{% include 'includes/footer.twig' %}
+		</div><!--end main-->
+	</div><!--end bk-pt-home-->
+</div><!--end wrap-->
+
+{% endblock %}

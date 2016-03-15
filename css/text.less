@@ -1,0 +1,81 @@
+// TYPOGRAPHY
+
+// Headings
+
+h1 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch1-font-size, 0.9);
+		line-height: bkscale(@font-swatch1-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch1-font-size, 0.8);
+		line-height: bkscale(@font-swatch1-line-height, 0.8);
+	}
+}
+
+h2 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch2-font-size, 0.9);
+		line-height: bkscale(@font-swatch2-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch2-font-size, 0.8);
+		line-height: bkscale(@font-swatch2-line-height, 0.8);
+	}
+}
+
+h3 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch3-font-size, 0.9);
+		line-height: bkscale(@font-swatch3-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch3-font-size, 0.8);
+		line-height: bkscale(@font-swatch3-line-height, 0.8);
+	}
+}
+
+h4 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch4-font-size, 0.9);
+		line-height: bkscale(@font-swatch4-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch4-font-size, 0.8);
+		line-height: bkscale(@font-swatch4-line-height, 0.8);
+	}
+}
+
+h5 {
+	font-family: @font-swatch4-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch4-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch4-color;
+	letter-spacing: @font-swatch4-letter-spacing;
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size, 0.9);
+		line-height: bkscale(@font-swatch5-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		line-height: bkscale(@font-swatch5-line-height, 0.8);
+	}
+}
+
+// Normal text
+
+p {
+	padding-bottom: 1em;
+}
+
+p, ul, ol, li, .p-font {
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size, 0.9);
+		line-height: bkscale(@font-swatch5-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		line-height: bkscale(@font-swatch5-line-height, 0.8);
+	}
+}

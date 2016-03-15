@@ -1,0 +1,157 @@
+{
+	"name":"Skyline",
+	"thumbnail":"skyline.png",
+	"screenshot":"skyline.png",
+	"templateType":"standard",
+	"pageTypes": ["home", "gallery"],
+	"tags": {
+	"en": ["clean", "news", "fullscreen", "blog", "travel", "modern", "flexible", "monochrome", "minimalistic", "sans-serif", "parallax"],
+	"es": ["limpio", "noticias", "fullscreen", "blog", "viajes", "moderno", "flexible", "monocromo", "minimalista", "sans-serif", "parallax"],
+	"br": ["limpo", "notícia", "fullscreen", "blog", "viagem", "moderno", "flexível", "monocromático", "minimalista", "sans-serif", "parallax"]
+	},
+	"images":[
+		"images/feature-bg.jpg",
+		"images/gallery/1.jpg",
+		"images/gallery/2.jpg",
+		"images/gallery/3.jpg",
+		"images/gallery/4.jpg",
+		"images/gallery/5.jpg",
+		"images/gallery/6.jpg"
+	],
+	"colorSwatches":
+	{
+		"Swatch 1": {
+			"color1":"#ffffff",
+			"color2":"#f0f2f5",
+			"color3":"#A54D71",
+			"color4":"#45474c",
+			"color5":"#707075",
+			"color6":"#222224",
+			"color7":"#ffffff"
+		},
+		"Swatch 2": {
+			"color1":"#ffffff",
+			"color2":"#f0f2f5",
+			"color3":"#33a2da",
+			"color4":"#45474c",
+			"color5":"#707075",
+			"color6":"#222224",
+			"color7":"#ffffff"
+		},
+		"Swatch 3": {
+			"color1":"#ffffff",
+			"color2":"#f0f2f5",
+			"color3":"#ffae00",
+			"color4":"#45474c",
+			"color5":"#707075",
+			"color6":"#222224",
+			"color7":"#ffffff"
+		},
+		"Swatch 4": {
+			"color1":"#ffffff",
+			"color2":"#f0f2f5",
+			"color3":"#7fbc2b",
+			"color4":"#45474c",
+			"color5":"#707075",
+			"color6":"#222224",
+			"color7":"#ffffff"
+		},
+		"Swatch 5": {
+			"color1":"#ffffff",
+			"color2":"#f0f2f5",
+			"color3":"#aa64bc",
+			"color4":"#45474c",
+			"color5":"#707075",
+			"color6":"#222224",
+			"color7":"#ffffff"
+		}
+	},
+	"fontSwatch": {
+	   "title": "Oswald",
+		"font1": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "40px",
+			"font-weight": "400",
+			"line-height": "40px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font2": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "28px",
+			"font-weight": "400",
+			"line-height": "34px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font3": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "22px",
+			"font-weight": "400",
+			"line-height": "28px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font4": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "18px",
+			"font-weight": "400",
+			"line-height": "24px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font5": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "14px",
+			"font-weight": "300",
+			"line-height": "22px",
+			"color": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "16px",
+			"font-weight": "400",
+			"line-height": "26px",
+			"color": "@color-swatch1",
+			"color-hover": "@color-swatch3",
+			"letter-spacing": "1px",
+			"background-color": "transparent",
+			"background-color-hover": "transparent"
+		},
+		"font7": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "15px",
+			"font-weight": "400",
+			"line-height": "20px",
+			"color": "@color-swatch1",
+			"letter-spacing": "1px",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3"
+		},
+		"font8": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "60px",
+			"font-weight": "400",
+			"line-height": "70px",
+			"color": "@color-swatch1",
+			"letter-spacing": "2px"
+		},
+		"font9": {
+			"font-family": "\"Georgia\", serif",
+			"font-size": "18px",
+			"font-weight": "400",
+			"line-height": "30px",
+			"color": "@color-swatch1",
+			"letter-spacing": "1px"
+		},
+		"font10": {
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "26px",
+			"font-weight": "400",
+			"line-height": "40px",
+			"color": "@color-swatch1",
+			"letter-spacing": "inherit"
+		}
+	}
+}
