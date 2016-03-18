@@ -80,7 +80,7 @@
 			"font-family": "\"Oswald\", Arial, sans-serif",
 			"font-size": "28px",
 			"font-weight": "400",
-			"line-height": "34px",
+			"line-height": "28px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
@@ -88,7 +88,7 @@
 			"font-family": "\"Oswald\", Arial, sans-serif",
 			"font-size": "22px",
 			"font-weight": "400",
-			"line-height": "28px",
+			"line-height": "22px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
@@ -96,7 +96,7 @@
 			"font-family": "\"Oswald\", Arial, sans-serif",
 			"font-size": "18px",
 			"font-weight": "400",
-			"line-height": "24px",
+			"line-height": "18px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
@@ -131,9 +131,9 @@
 		},
 		"font8": {
 			"font-family": "\"Oswald\", Arial, sans-serif",
-			"font-size": "60px",
+			"font-size": "70px",
 			"font-weight": "400",
-			"line-height": "70px",
+			"line-height": "80px",
 			"color": "@color-swatch1",
 			"letter-spacing": "2px"
 		},
