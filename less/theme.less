@@ -37,7 +37,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 	padding: 0;
 	line-height: 1em;
@@ -51,6 +51,20 @@ h5 {
 	letter-spacing: @font-swatch4-letter-spacing;
 }
 
+blockquote {
+	margin: 0 0 50px;
+	padding: 0;
+	font-family: @font-swatch9-font-family;
+	font-size: @font-swatch4-font-size;
+	font-style: italic;
+	&:before {
+		display: none;
+	}
+}
+
+.content .bk-content-text ol {
+	list-style-position: inherit;
+}
 
 
 // ---------------------------
@@ -76,6 +90,7 @@ h5 {
 		display: inline-block;
 		vertical-align: middle;
 		text-transform: uppercase;
+		line-height: 0;
 	}
 	&.logo {
 		margin-right: 12px;
@@ -275,7 +290,7 @@ h5 {
 		opacity: .5;
 		position: absolute;
 		left: 360px;
-		top: 32px; 
+		top: 30px; 
 		display: inline-block;
 		width: 40px;
 		height: 40px;
@@ -287,7 +302,7 @@ h5 {
 			opacity: 1;
 		}
 		@media @mobile {
-			left: 330px;
+			left: 310px;
 			top: 25px;
 		}
 		&:after {
@@ -426,6 +441,200 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	z-index: 5;
 	height: 70%;
 }
+
+
+
+// ---------------------------
+// 5. #FEATURE
+// ---------------------------
+
+
+.widget.feature {
+	height: 100%;
+	.feature-bgimg {
+		height: 100%;
+	}
+}
+
+.widget.feature .feature-bgimg .content {
+	text-align: center;
+	@media @mobile {
+		padding: 100px 20px;
+		-webkit-overflow-scrolling: touch;
+	}
+	.spare {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 40px;
+		@media @mobile {
+			padding: 20px;
+		}
+		/*@media only screen and (max-height: 450px) {
+			position: relative;
+			top: 30px;
+			h2 {
+				font-size: bkscale(@font-swatch1-font-size, 0.62);
+				line-height: bkscale(@font-swatch1-line-height, 0.68);
+				padding-bottom: 8px;
+			}
+			h3 {
+				font-size: bkscale(@font-swatch5-font-size, 0.95);
+				line-height: bkscale(@font-swatch5-line-height, 0.8);
+			}
+			button {
+				padding: 8px 15px;
+				margin-top: 12px;
+			}
+		} */
+	}
+	h2 {
+		padding-bottom: 10px;
+		@media @tablet {
+			font-size: bkscale(@font-swatch8-font-size, 0.7);
+			line-height: bkscale(@font-swatch8-line-height, 0.8);
+		}
+		@media @mobile {
+			font-size: bkscale(@font-swatch8-font-size, 0.55);
+			line-height: bkscale(@font-swatch8-line-height, 0.7);
+		}
+		@media only screen and (max-height: 420px) {
+			font-size: bkscale(@font-swatch8-font-size, 0.55);
+			line-height: bkscale(@font-swatch8-line-height, 0.7);
+		}
+	}
+	h3 {
+		font-style: italic;
+		text-transform: none;
+		@media @tablet {
+			font-size: bkscale(@font-swatch9-font-size, 0.8);
+			line-height: bkscale(@font-swatch9-line-height, 0.8);
+		}
+		@media @mobile {
+			font-size: bkscale(@font-swatch9-font-size, 0.7);
+			line-height: bkscale(@font-swatch9-line-height, 0.7);
+		}
+	}
+	button {
+		padding: 0 40px;
+		&:hover {
+		}
+		@media @mobile {
+			width: 100%;
+			margin-top: 10px;
+		}
+		span {
+			vertical-align: inherit;
+		}
+	}
+}
+
+
+
+
+
+// ---------------------------
+// 6. #MAIN & CONTAINER
+// ---------------------------
+
+
+
+.container {
+	padding: 50px;
+	margin: 0 auto;
+	max-width: 1400px;
+	position: relative;
+	background-color: @color-swatch2;
+	@media @mobile {
+		padding: 20px;
+	}
+}
+
+.bk-pt-home .container {
+	top: 0;
+}
+
+.bk-pt-default .container {
+	top: 100px;
+	margin-bottom: 100px;
+	@media @tablet {
+		top: 100px;
+	}
+	@media @mobile {
+		top: 90px;
+	}
+}
+
+.bk-pt-home .bk-footer {
+	margin-top: 0;
+}
+
+#main {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	.border-radius(0px);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+
+// ---------------------------
+// 7. #FOOTER
+// ---------------------------
+
+
+.bk-footer {
+	display: table;
+	width: 100%;
+	padding: 40px;
+	border-top: 1px solid fade(@color-swatch6, 10%);
+	position: relative;
+	.copyright {
+		text-align: left;
+		.widget.profile {
+		}
+		@media @mobile {
+			padding-bottom: 20px;
+		}
+	}
+	.socialicons {
+		float: right;
+		margin: 0!important;
+		opacity: 0.6;
+	}
+	.copyright, .socialicons {
+		display: table-cell;
+		vertical-align: middle;
+		@media @mobile {
+			display: block;
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.widget.profile .bk-profile-socialicons {
+		margin: 0;
+	}
+}
+
+.bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
+	background-color: transparent;
+}
+
+.widget.profile .bk-profile-socialicons span {
+	padding: 3px;
+}
+
+
+
+
 
 
 

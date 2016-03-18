@@ -33,89 +33,6 @@
 
 
 
-/* 4. Feature */
-
-.widget.feature {
-	height: 100%;
-	.feature-bgimg {
-		height: 100%;
-	}
-}
-
-.widget.feature .feature-bgimg .content {
-	text-align: center;
-	@media @mobile {
-		padding: 100px 20px;
-		-webkit-overflow-scrolling: touch;
-	}
-	.spare {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 40px;
-		@media @mobile {
-			padding: 20px;
-		}
-		/*@media only screen and (max-height: 450px) {
-			position: relative;
-			top: 30px;
-			h2 {
-				font-size: bkscale(@font-swatch1-font-size, 0.62);
-				line-height: bkscale(@font-swatch1-line-height, 0.68);
-				padding-bottom: 8px;
-			}
-			h3 {
-				font-size: bkscale(@font-swatch5-font-size, 0.95);
-				line-height: bkscale(@font-swatch5-line-height, 0.8);
-			}
-			button {
-				padding: 8px 15px;
-				margin-top: 12px;
-			}
-		} */
-	}
-	h2 {
-		padding-bottom: 10px;
-		@media @tablet {
-			font-size: bkscale(@font-swatch8-font-size, 0.7);
-			line-height: bkscale(@font-swatch8-line-height, 0.8);
-		}
-		@media @mobile {
-			font-size: bkscale(@font-swatch8-font-size, 0.55);
-			line-height: bkscale(@font-swatch8-line-height, 0.7);
-		}
-		@media only screen and (max-height: 420px) {
-			font-size: bkscale(@font-swatch8-font-size, 0.55);
-			line-height: bkscale(@font-swatch8-line-height, 0.7);
-		}
-	}
-	h3 {
-		font-style: italic;
-		text-transform: none;
-		@media @tablet {
-			font-size: bkscale(@font-swatch9-font-size, 0.8);
-			line-height: bkscale(@font-swatch9-line-height, 0.8);
-		}
-		@media @mobile {
-			font-size: bkscale(@font-swatch9-font-size, 0.7);
-			line-height: bkscale(@font-swatch9-line-height, 0.7);
-		}
-	}
-	button {
-		padding: 0 40px;
-		&:hover {
-		}
-		@media @mobile {
-			width: 100%;
-			margin-top: 10px;
-		}
-		span {
-			vertical-align: inherit;
-		}
-	}
-}
-
-
-
 
 /* Home Page Gallery */
 
@@ -215,108 +132,6 @@
 	}
 }
 
-
-
-
-
-/* 5. Main */
-
-.contain {
-	padding: 40px;
-	margin: 0 auto;
-	max-width: 1200px;
-	position: relative;
-	background-color: @color-swatch2;
-	@media @mobile {
-		padding: 20px;
-	}
-}
-
-.bk-pt-home .contain {
-	top: 0;
-}
-
-.bk-pt-default .contain {
-	top: 120px;
-	margin-bottom: 100px;
-	@media @tablet {
-		top: 100px;
-	}
-	@media @mobile {
-		top: 90px;
-	}
-}
-
-.bk-pt-home .bk-footer {
-	margin-top: 0;
-}
-
-#main {
-	display: block;
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	.border-radius(0px);
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-
-/* .bk-pt-home #main .widget.feature.bk-tpl-hidden + .bk-header {
-	background: lighten(@color-swatch6, 5%);
-	padding: 30px;
-	position: relative;
-	right: 0!important;
-	width: 100%;
-	@media @mobile {
-		padding: 20px;
-	}
-} */
-
-/* 6. Footer */
-
-.bk-footer {
-	display: table;
-	width: 100%;
-	padding: 20px 40px;
-	border-top: 1px solid fade(@color-swatch6, 10%);
-	position: relative;
-	.copyright {
-		text-align: left;
-		.widget.profile {
-		}
-		@media @mobile {
-			padding-bottom: 20px;
-		}
-	}
-	.socialicons {
-		float: right;
-		margin: 0!important;
-		opacity: 0.6;
-	}
-	.copyright, .socialicons {
-		display: table-cell;
-		vertical-align: middle;
-		@media @mobile {
-			display: block;
-			width: 100%;
-			text-align: center;
-		}
-	}
-}
-
-.bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
-	background-color: transparent;
-}
-
-.widget.profile .bk-profile-socialicons span {
-	padding: 3px;
-}
 
 /* 7. Blog */
 
@@ -1160,6 +975,7 @@ input.blog-search-input, .widget.signupform input,
 }
 
 textarea {
+	padding-top: 10px;
 	border: 1px solid @color-swatch2;
 	text-indent: 8px;
 	-webkit-appearance: none;
@@ -1304,24 +1120,25 @@ textarea {
 	}    
 }
 
-textarea {
-	padding-top: 10px;
-}
-
 
 
 .widget {
 	&.contactform {
-		margin: 20px 0;
+		margin: 0 0 50px 0;
+		fieldset {
+			margin: 0;
+		}
 		label {
-			font-family: @font-swatch4-font-family;
-			font-size: @font-swatch5-font-size;
-			font-weight: @font-swatch4-font-weight;
-			line-height: @font-swatch4-line-height;
-			margin: 0 0 5px;
+			font-family: @font-swatch5-font-family;
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			font-weight: @font-swatch5-font-weight;
+			line-height: bkscale(@font-swatch5-line-height, 0.6);
+			margin: 0 0 10px;
+			text-transform: uppercase;
+			letter-spacing: .05em;
 		}
 		input, textarea {
-			margin-bottom: 10px;
+			margin-bottom: 25px;
 		}
 		button.btn {
 			@media @mobile {
@@ -1394,6 +1211,10 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
+.widget.button, .widget.paypalbuynow, .widget.tweet, .widget.dropbox, .widget.clicktocall {
+	margin: 0 0 50px;
+}
+
 .widget.blogsearch button, .widget.profile form button,
 .widget.signupform fieldset button, .productlist-search button {
 	width: 30%;
@@ -1405,17 +1226,6 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 }
 
 
-blockquote {
-	margin: 20px 0;
-	padding: 0;
-	font-family: @font-swatch9-font-family;
-	font-size: @font-swatch4-font-size;
-	font-style: italic;
-	&:before {
-		display: none;
-	}
-}
-
 .widget.line {
 }
 
@@ -1424,12 +1234,9 @@ hr.line {
 }
 
 .widget.map, .widget.youtube, .widget.content, .signupform {
-	margin: 20px 0;
+	margin-bottom: 50px;
 }
 
-.content .bk-content-text ol {
-	list-style-position: inherit;
-}
 
 .bk-profile-address p:after {
 	display: none;
@@ -1488,7 +1295,7 @@ hr.line {
 
 // Twitter Feed
 .widget.twitter {
-	margin: 20px 0;
+	margin: 0 0 50px;
 	img {
 		border-radius: 50%;
 		width: 70px;
@@ -1496,9 +1303,10 @@ hr.line {
 	p {
 		color: @color-swatch4;
 		padding: 0;
-	}	
-	li {
-		border-bottom: darken(@color-swatch1,10%);
+	}
+	ul li {
+		padding: 0;
+		margin-bottom: 25px;
 	}
 	ul li a:hover {
 		text-decoration: none;
@@ -1687,7 +1495,7 @@ hr.line {
 }
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
-	margin: 2em 0 1em;
+	margin-bottom: 50px;
 	text-align: center;
 	span a {
 		background-color: transparent;
