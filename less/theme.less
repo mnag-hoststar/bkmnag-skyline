@@ -191,6 +191,9 @@ blockquote {
 }
 
 .menu-active .widget.extendednavigation a.pull {
+	@media @mobile {
+		left: 210px;
+	}
 	&:after {
 		-ms-transform: rotate(45deg); /* IE 9 */
 		-moz-transform: rotate(45deg); /* Mozilla */
@@ -267,6 +270,17 @@ blockquote {
 		height: 100%;
 	}
 }
+
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + #group1,
+.widget[data-widget-type="responsiveslideshow"].bk-tpl-hidden + #group3 {
+	display: none;
+}
+
+
+
+
+
 
 
 // HOME parallax
