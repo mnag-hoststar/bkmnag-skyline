@@ -127,7 +127,7 @@
 			"color": "@color-swatch1",
 			"letter-spacing": "1px",
 			"background-color": "@color-swatch3",
-			"background-color-hover": "@color-swatch3"
+			"background-color-hover": "@color-swatch4"
 		},
 		"font8": {
 			"font-family": "\"Oswald\", Arial, sans-serif",
