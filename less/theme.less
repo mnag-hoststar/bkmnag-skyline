@@ -117,7 +117,7 @@ blockquote {
 	text-align: right;
 	position: fixed;
 	top: 0;
-	z-index: 1;
+	z-index: 10;
 	@media @mobile {
 		padding: 25px;
 	}
@@ -225,13 +225,14 @@ blockquote {
 
 
 .parallax {
-	-webkit-perspective: 300px;
-	perspective: 300px;
-	height: 500px; /* fallback for older browsers */
+	-webkit-perspective: 303px;
+	perspective: 303px;
+	height: 100%;
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	margin-right: -20px;
 	@media @tablet {
 		height: 100%;
 	}
@@ -250,8 +251,8 @@ blockquote {
 }
 
 .parallax_layer-back {
-	-webkit-transform: translateZ(-300px) scale(2);
-	transform: translateZ(-300px) scale(2);
+	-webkit-transform: translateZ(-300px) scale(2.1);
+	transform: translateZ(-300px) scale(2.1);
 	@media @mobile {
 		transform: inherit;
 		-webkit-transform: inherit;
@@ -400,7 +401,7 @@ blockquote {
 	position: relative;
 	background-color: @color-swatch2;
 	@media @mobile {
-		padding: 20px;
+		padding: 40px;
 	}
 }
 
@@ -430,7 +431,7 @@ blockquote {
 	right: 0;
 	width: 100%;
 	height: 100%;
-	overflow-y: scroll;
+	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
 	.border-radius(0px);
 	-moz-box-sizing: border-box;
