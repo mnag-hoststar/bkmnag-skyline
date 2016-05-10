@@ -536,8 +536,11 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 .widget.blogsearch button, .widget.profile form button,
 .widget.signupform fieldset button, .productlist-search button {
 	width: 30%;
-	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 	@media @mobile {
+		position: relative;
 		width: 100%;
 		margin-bottom: 10px;
 	}
