@@ -101,7 +101,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font5": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "Helvetica, Arial, sans-serif",
 			"font-size": "14px",
 			"font-weight": "300",
 			"line-height": "22px",
@@ -138,7 +138,7 @@
 			"letter-spacing": "2px"
 		},
 		"font9": {
-			"font-family": "\"Georgia\", serif",
+			"font-family": "Georgia, serif",
 			"font-size": "18px",
 			"font-weight": "400",
 			"line-height": "30px",
