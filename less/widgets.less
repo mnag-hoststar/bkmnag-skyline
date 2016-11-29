@@ -504,7 +504,8 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 
 button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile form button,
-.widget.signupform fieldset button {
+.widget.signupform fieldset button,
+.advancedcontactform button {
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -657,7 +658,8 @@ input,
 .widget.profile form fieldset input,
 .widget.signupform fieldset input,
 input.blog-search-input, .widget.signupform input,
-.widget.blogsearch input {
+.widget.blogsearch input, 
+.advancedcontactform input{
 	border: 1px solid @color-swatch2;
 	text-indent: 8px;
 	-webkit-appearance: none;
@@ -696,7 +698,7 @@ textarea {
 
 
 .widget {
-	&.contactform {
+	&.contactform, .advancedcontactform {
 		margin: 0 0 50px 0;
 		fieldset {
 			margin: 0;
