@@ -695,6 +695,18 @@ input.blog-search-input, .widget.signupform input,
 		text-transform: uppercase;
 		letter-spacing: .05em;
 	}
+	.label--radio:before {
+		background: white;
+		background-size: 24px;
+		background-position: center;
+		border: 1px solid lightgray;
+		box-shadow: 0 1px 0 0 white;
+		display: inline-block;
+		height: 24px;
+		margin: 12px 12px 12px 0;
+		vertical-align: middle;
+		width: 24px;
+	}
 	input {
 		border: 1px solid @color-swatch2;
 		text-indent: 8px;
@@ -714,6 +726,9 @@ input.blog-search-input, .widget.signupform input,
 			width: 100%;
 			margin-bottom: 10px;
 		}
+	}
+	input[type="checkbox"] {
+		visibility: hidden;
 	}
 	select {
 		color: @font-swatch5-color;
