@@ -464,19 +464,29 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 .productlist-display-form, .productlist-item-count { 
 	select {
 		color: @font-swatch5-color;
-		background-color: @color-swatch1;
-		font-size: bkscale(@font-swatch7-font-size, 0.85);
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		text-transform: uppercase;
 		border-radius: 0;
 		height: 40px;
 		line-height: 40px;
-		appearance: menulist;
-		-webkit-appearance: menulist;
-		-moz-appearance: menulist;
-		-o-appearance: menulist;
-		-ms-appearance: menulist;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
 		border: 1px solid darken(@color-swatch2, 5%);
-		//padding: 14px 5px 14px 12px;
-		text-indent: 5px;
+		background: image('/images/arrow-small-down.svg') no-repeat 98% center;
+		background-size: 26px;
+		background-color: @color-swatch1;
+		text-indent: 14px;
+		.transition( all, 0.3s, ease);
+		&:hover {
+			border: 1px solid darken(@color-swatch2, 15%);
+			.transition( all, 0.3s, ease);
+		}
+		&:focus {
+			border: 1px solid darken(@color-swatch2, 25%);
+		}
 		@media @tablet {
 			background-position: 98% center;
 			width: 100%;
