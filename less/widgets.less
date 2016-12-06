@@ -684,16 +684,6 @@ input.blog-search-input, .widget.signupform input,
 	.form-group {
 		margin-bottom: 30px;
 	}
-	label {
-		display: block!important;
-		font-family: @font-swatch5-font-family;
-		font-size: bkscale(@font-swatch5-font-size, 0.8);
-		font-weight: @font-swatch5-font-weight;
-		line-height: bkscale(@font-swatch5-line-height, 0.6);
-		padding: 0 0 15px;
-		text-transform: uppercase;
-		letter-spacing: .05em;
-	}
 	.option-item--checkbox {
 		width: 100%;
 		position: relative;
@@ -748,6 +738,74 @@ input.blog-search-input, .widget.signupform input,
 		input[type="checkbox"]:checked + label:after {
 			opacity: 1;
 		}
+	}
+	.option-item--radio {
+		width: 100%;
+		position: relative;
+		label {
+			cursor: pointer;
+			margin-left: 40px;
+			margin-bottom: 10px;
+			padding: 0;
+			display: inline-block!important;
+			line-height: 25px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 25px;
+				background-color: white;
+				border: 1px solid @color-swatch2;
+				left: -40px;
+				top: 0;
+				.transition( all, 0.3s, ease);
+			}
+			&:hover::before {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 25px;
+				background-color: white;
+				border: 1px solid darken(@color-swatch2, 15%);
+				left: -40px;
+				top: 0;
+				.transition( all, 0.3s, ease);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 21px;
+				height: 21px;
+				opacity: 0;
+				border-radius: 25px;
+				border: 1px solid darken(@color-swatch2, 25%);
+				background: image('/images/radio.svg') no-repeat center; 
+				background-color: white;
+				left: -38px;
+				top: 2px;
+				.transition( all, 0.3s, ease);
+			}
+		}
+		input[type="radio"] {
+			visibility: hidden;
+			position: absolute;
+		}
+		input[type="radio"]:checked + label:after {
+			opacity: 1;
+		}
+	}
+	label {
+		display: block!important;
+		font-family: @font-swatch5-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		font-weight: @font-swatch5-font-weight;
+		line-height: bkscale(@font-swatch5-line-height, 0.6);
+		padding: 0 0 15px;
+		text-transform: uppercase;
+		letter-spacing: .05em;
 	}
 	input {
 		border: 1px solid @color-swatch2;
