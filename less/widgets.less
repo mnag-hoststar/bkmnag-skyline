@@ -679,40 +679,41 @@ input.blog-search-input, .widget.signupform input,
 	}
 }
 
-input[type="checkbox"] {
-		visibility: hidden;
-	}
-
 .advancedcontactform {
 	margin: 0 0 40px 0;
 	.form-group {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	label {
-		display: block;
+		display: block!important;
 		font-family: @font-swatch5-font-family;
 		font-size: bkscale(@font-swatch5-font-size, 0.8);
 		font-weight: @font-swatch5-font-weight;
 		line-height: bkscale(@font-swatch5-line-height, 0.6);
-		padding: 0 0 10px;
+		padding: 0 0 15px;
 		text-transform: uppercase;
 		letter-spacing: .05em;
 	}
 	.option-item--checkbox {
 		width: 100%;
-		height: 20px;
 		position: relative;
-		.label {
+		label {
 			cursor: pointer;
-			margin-left: 20px;
+			margin-left: 40px;
+			margin-bottom: 10px;
+			padding: 0;
+			display: inline-block!important;
+			line-height: 20px;
+			font-size: @font-swatch5-font-size;
+			text-transform: none;
 			&:before {
 				content: '';
 				position: absolute;
 				width: 20px;
 				height: 20px;
-				background-color: blue;
-				left: 2px;
-				top: 2px;
+				background-color: lightblue;
+				left: -40px;
+				top: 0;
 			}
 			&:after {
 				content: '';
@@ -721,9 +722,13 @@ input[type="checkbox"] {
 				height: 20px;
 				opacity: 0;
 				background-color: blue;
-				left: 2px;
-				top: 2px;
+				left: -40px;
+				top: 0;
 			}
+		}
+		input[type="checkbox"] {
+			visibility: hidden;
+			position: absolute;
 		}
 		input[type="checkbox"]:checked + label:after {
 			opacity: 1;
