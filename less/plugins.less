@@ -422,6 +422,10 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 						position: relative;
 					}
 				}
+				input {
+					width: 70%;
+					float: right;
+				}
 				button {
 					min-width: 0;
 					padding: 0;
@@ -460,7 +464,7 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 	}
 }
 
-
+/*
 .productlist-display-form, .productlist-item-count { 
 	select {
 		color: @font-swatch5-color;
@@ -496,6 +500,7 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 		}
 	}
 }
+*/
 
 .widget.ecomproduct {
 	h2 {
@@ -616,16 +621,12 @@ a.btn.ecom-product-go-to-checkout-btn {
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select {
-	color: @font-swatch5-color;
-	background-color: @color-swatch1;
-	font-size: bkscale(@font-swatch7-font-size, 0.85);
-	border-radius: 0;
-	height: 40px;
-	line-height: 40px;
-	-webkit-appearance: menulist;
-	border: 1px solid darken(@color-swatch2, 5%);
-	text-indent: 5px;
-	//padding: 14px 5px 14px 12px;
+	width: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
 }
 
 .ecom-productslist-title, .ecom-featuredproducts-title, .ecom-product-title {

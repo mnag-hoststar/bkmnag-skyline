@@ -828,41 +828,19 @@ input.blog-search-input, .widget.signupform input,
 			margin-bottom: 10px;
 		}
 	}
-	select {
-		color: @font-swatch5-color;
-		font-size: bkscale(@font-swatch5-font-size, 0.8);
-		text-transform: uppercase;
-		border-radius: 0;
-		height: 40px;
-		line-height: 40px;
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-o-appearance: none;
-		-ms-appearance: none;
-		border: 1px solid darken(@color-swatch2, 5%);
-		background: image('/images/arrow-small-down.svg') no-repeat 98% center;
-		background-size: 26px;
-		background-color: @color-swatch1;
-		text-indent: 14px;
-		.transition( all, 0.3s, ease);
-		&:hover {
-			border: 1px solid darken(@color-swatch2, 15%);
-			.transition( all, 0.3s, ease);
-		}
-		&:focus {
-			border: 1px solid darken(@color-swatch2, 25%);
-		}
-		@media @tablet {
-			background-position: 98% center;
-			width: 100%;
-		}
-		@media @mobile {
-			margin-left: 0;
-		}
-	}
 }
 
+
+label {
+	display: block;
+	font-family: @font-swatch5-font-family;
+	font-size: bkscale(@font-swatch5-font-size, 0.8);
+	font-weight: @font-swatch5-font-weight;
+	line-height: bkscale(@font-swatch5-line-height, 0.6);
+	margin: 0 0 15px;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
 
 textarea {
 	padding-top: 10px;
@@ -880,6 +858,40 @@ textarea {
 	}
 }
 
+select {
+	color: @font-swatch5-color;
+	font-size: bkscale(@font-swatch5-font-size, 0.8);
+	text-transform: uppercase;
+	border-radius: 0;
+	height: 40px;
+	line-height: 40px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	border: 1px solid darken(@color-swatch2, 5%);
+	background: image('/images/arrow-small-down.svg') no-repeat 98% center;
+	background-size: 26px;
+	background-color: @color-swatch1;
+	text-indent: 14px;
+	.transition( all, 0.3s, ease);
+	&:hover {
+		border: 1px solid darken(@color-swatch2, 15%);
+		.transition( all, 0.3s, ease);
+	}
+	&:focus {
+		border: 1px solid darken(@color-swatch2, 25%);
+	}
+	@media @tablet {
+		background-position: 98% center;
+		width: 100%;
+	}
+	@media @mobile {
+		margin-left: 0;
+	}
+}
+
 
 .widget {
 	&.contactform {
@@ -893,7 +905,7 @@ textarea {
 			font-size: bkscale(@font-swatch5-font-size, 0.8);
 			font-weight: @font-swatch5-font-weight;
 			line-height: bkscale(@font-swatch5-line-height, 0.6);
-			margin: 0 0 10px;
+			margin: 0 0 15px;
 			text-transform: uppercase;
 			letter-spacing: .05em;
 		}
@@ -906,7 +918,17 @@ textarea {
 			}
 		}
 	}
-	&.signupform fieldset {
+	&.signupform {
+		label {
+			display: block;
+			font-family: @font-swatch5-font-family;
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			font-weight: @font-swatch5-font-weight;
+			line-height: bkscale(@font-swatch5-line-height, 0.6);
+			margin: 0 0 15px;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+		}
 		button {
 			vertical-align: top;
 		}
