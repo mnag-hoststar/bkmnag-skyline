@@ -117,7 +117,8 @@ blockquote {
 	text-align: right;
 	position: fixed;
 	top: 0;
-	z-index: 10;
+	z-index: 10000;
+	
 	@media @mobile {
 		padding: 25px;
 	}
@@ -137,14 +138,16 @@ blockquote {
 	left: -320px;
 	width: 320px;
 	.transition(all, 0.5s, ease);
-	z-index: 9999;
+	z-index: 10000;
 	display: flex;
 	flex-direction: column;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
+	
 	@media only screen and (max-height: 450px) {
 		height: auto;
 	}
+	
 	@media @mobile {
 		left: -100%;
 		width: 100%;
@@ -424,8 +427,6 @@ blockquote {
 }
 
 #main {
-	display: block;
-	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;

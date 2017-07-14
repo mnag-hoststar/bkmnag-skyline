@@ -4,14 +4,14 @@
 <div class="bk-pt-default">
 
 <div id="wrap">
-	<nav class="bk-nav" id="nav">
-		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-		{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
-	</nav>
 	<header class="bk-header">
 		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
 		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 	</header>
+	<nav class="bk-nav" id="nav">
+		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+		{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
+	</nav>
 	<div role="main" id="main">
 		<div class="container" id="container">
 			{{zone('main')|raw}}

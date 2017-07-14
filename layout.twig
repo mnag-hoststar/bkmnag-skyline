@@ -34,6 +34,26 @@
 	{% block content %}
 	{% endblock %}
 	{% include basekit.bodyScript %}
+
+<!-- Body Scripts Start -->
+
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Parallax Effect -->
+<script src="{{asset('js/custom-parallax.js')}}"></script>
+
+<script src="{{asset('js/custom-rellax.min.js')}}"></script>
+<script>
+      // Need DEBUG for old version of Rellax.js
+      var DEBUG = false;
+      var rellax = new Rellax('.rellax');
+</script>
+	
+<!-- Overlay Corrections -->
+<script src="{{asset('js/overlay-corrections.js')}}"></script>
+	
+<!-- Support SVG -->
 <script type="text/javascript">
 	! function () {
 	    function supportsSVG() {
@@ -55,6 +75,8 @@
     }
   }).call(this);
 </script>
+	
+<!-- Body Scripts End -->
 
 </body>
 </html>

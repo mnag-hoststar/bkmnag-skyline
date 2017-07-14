@@ -32,14 +32,13 @@
 // 12.   #DIVIDER (KEYLINE)
 // 13.   #PROFILE
 // 14.   #MAP, #YOUTUBE ...
-
+// 15.   #WIDGET OVERLAY
 
 
 
 // -----------------------------
 // 1.-2. #LOGO & #COMPANY NAME
 // -----------------------------
-
 
 .widget {
 	&.logo, &.companyname {
@@ -76,12 +75,9 @@
 	}
 }
 
-
-
 // -----------------------------
 // 3. #NAVIGATION
 // -----------------------------
-
 
 .widget.extendednavigation {
 	padding: 30px 15px;
@@ -211,19 +207,18 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	display: block!important;
 }
 
-
-
-
 // ---------------------------
 // 4. #FEATURE
 // ---------------------------
 
-
 .widget.feature {
-	height: 100%;
-	.feature-bgimg {
-		height: 100%;
-	}
+	min-height: 100%;
+	min-height: 100vh;
+}
+
+.widget.feature .feature-bgimg {
+	min-height: 100%;
+	min-height: 100vh;
 }
 
 .widget.feature .feature-bgimg .content {
@@ -281,14 +276,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 }
 
-
-
-
 // ---------------------------
 // 6. #GALLERY
 // ---------------------------
-
-
 
 .widget.gallery {
 	margin-left: 0;
@@ -345,14 +335,9 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	opacity: 1;
 }
 
-
-
-
 // -----------------------------
 // 7. #SLIDESHOW
 // -----------------------------
-
-
 
 .widget {
 	&.responsiveslideshow {
@@ -491,17 +476,12 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 }
 
-
-
 // -----------------------------
 // 8. #BUTTONS
 // -----------------------------
 
-
-
 // 8.1 STANDARD
 // ------------
-
 
 button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile form button,
 .widget.signupform fieldset button,
@@ -547,7 +527,6 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
-
 // 8.2 TWEET
 // ---------
 
@@ -573,10 +552,8 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
-
 // 8.3 DROPBOX
 // -----------
-
 
 .widget.dropbox button {
 	padding: 10px 30px 10px 60px;
@@ -596,10 +573,8 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
-
 // 8.4 CLICK TO CALL
 // -----------------
-
 
 .widget.clicktocall a {
 	@media @mobile {
@@ -623,10 +598,8 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}    
 }
 
-
 // 8.5 PAYPAL
 // ----------
-
 
 .widget.paypalbuynow .widget.button.paypal {
 	border: none;
@@ -647,12 +620,9 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
-
-
 // -----------------------------
 // 9. #FORMS
 // -----------------------------
-
 
 input,
 .widget.profile form fieldset input,
@@ -892,7 +862,6 @@ select {
 	}
 }
 
-
 .widget {
 	&.contactform {
 		margin: 0 0 50px 0;
@@ -940,7 +909,6 @@ select {
 		}
 	}
 }
-
 
 // -----------------------------
 // 10. #SOCIAL ICONS
@@ -995,8 +963,6 @@ select {
 .svg .bk-socialicons-pinterest a {
 	background-image: image('/images/social/socialicons-pinterest-hover.svg');
 }
-
-
 
 // -----------------------------
 // 11.   #TWITTER FEED
@@ -1066,9 +1032,6 @@ select {
 	}
 }
 
-
-
-
 // -----------------------------
 // 12. #DIVIDER (KEYLINE)
 // -----------------------------
@@ -1083,7 +1046,6 @@ hr.line {
 	background-color: fade(@color-swatch6, 10%);
 	margin: 0;
 }
-
 
 // -----------------------------
 // 13. #PROFILE
@@ -1106,3 +1068,10 @@ hr.line {
 	margin-bottom: 50px;
 }
 
+// -----------------------------
+// 15. WIDGET OVERLAY
+// -----------------------------
+
+.widget-overlay {
+	z-index: 1000 !important;
+}

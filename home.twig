@@ -3,30 +3,21 @@
 
 <div id="wrap">
 	<div class="bk-pt-home">
-		<nav class="bk-nav" id="nav">
-			{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-			{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
-		</nav>
 		<header class="bk-header">
 			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
 			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 		</header>
+		<nav class="bk-nav" id="nav">
+			{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+			{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
+		</nav>
 		<div role="main" id="main">
-			<div class="parallax">
-				<div id="group1" class="parallax_group">
-					<div class="parallax_layer parallax_layer-back">
-						{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
-					</div>
-				</div>
-				<div id="group2" class="parallax_group">
-					<div class="parallax_layer parallax_layer-base">	
-						<div class="container" id="container">
-							{{zone('main')|raw}}
-						</div><!--end contain-->
-						{% include 'includes/footer.twig' %}
-					</div>
-				</div>
-			</div>
+			{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
+			<div class="log"></div>
+			<div class="container" id="container">
+				{{zone('main')|raw}}
+			</div><!--end contain-->
+			{% include 'includes/footer.twig' %}
 		</div><!--end main-->
 	</div><!--end bk-pt-home-->
 </div><!--end wrap-->
