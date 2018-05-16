@@ -44,12 +44,10 @@
 <script src="{{asset('js/custom-parallax.js')}}"></script>
 
 <script src="{{asset('js/custom-rellax.min.js')}}"></script>
-<script>
-      // Need DEBUG for old version of Rellax.js
-      var DEBUG = false;
-      var rellax = new Rellax('.rellax');
-</script>
-	
+
+<!-- Language Selector Bar -->
+<script src="{{asset('js/language-selector.js')}}"></script>
+
 <!-- Overlay Corrections -->
 <script src="{{asset('js/overlay-corrections.js')}}"></script>
 	
@@ -61,6 +59,12 @@
 	    }
 	    if (supportsSVG()) document.documentElement.className += ' svg'
 	}()
+</script>
+
+<script>
+      // Need DEBUG for old version of Rellax.js
+      var DEBUG = false;
+      var rellax = new Rellax('.rellax');
 </script>
 
 <script>

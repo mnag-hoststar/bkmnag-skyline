@@ -1,7 +1,6 @@
-/* -----------------------------------
-Custom Parallax Effect 
-with Rellax
--------------------------------------- */
+// ----------------------------------------
+// Skyline: JS > Custom Parallax
+// ----------------------------------------
 
 // Adding the class to the feature and the gallery slide show.
 
