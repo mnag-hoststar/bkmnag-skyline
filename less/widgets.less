@@ -82,6 +82,24 @@
 .widget.extendednavigation {
 	padding: 30px 15px;
 	text-transform: uppercase;
+	
+	// Widget overlay
+	.widget-overlay {
+	    right: -120px;
+	    
+	    .widget__list {
+	        display: inline;
+            float: right;
+            width: auto;
+	    }
+	    
+	    .widget__item {
+	        display: inline;
+	        font-size: 0;
+	        padding: 0;
+	    }
+	}
+	
 	ul {
 		display: block;
 		padding: 0;
@@ -154,7 +172,6 @@
 				}
 			}
 		}
-
 	}
 	a.pull {
 		opacity: .5;
