@@ -500,7 +500,10 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 // 8.1 STANDARD
 // ------------
 
-button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile form button,
+button.btn,
+.contactform button.btn,
+.widget.blogsearch button,
+.widget.profile form button,
 .widget.signupform fieldset button,
 .advancedcontactform button {
 	background-color: @font-swatch7-background-color;
@@ -519,6 +522,7 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	border: none;
 	text-transform: uppercase;
 	.transition( all, 0.5s, ease);
+	
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
@@ -527,16 +531,46 @@ button.btn, .contactform button.btn, .widget.blogsearch button, .widget.profile 
 	}
 }
 
-.widget.button, .widget.paypalbuynow, .widget.tweet, .widget.dropbox, .widget.clicktocall {
+.widget.button,
+.widget.paypalbuynow,
+.widget.tweet,
+.widget.dropbox,
+.widget.clicktocall {
 	margin: 0 0 50px;
 }
 
-.widget.blogsearch button, .widget.profile form button,
-.widget.signupform fieldset button, .productlist-search button {
+.widget.blogsearch button,
+.widget.profile form button,
+.widget.signupform fieldset button,
+.productlist-search button {
 	width: 30%;
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	
+	@media @mobile {
+		position: relative;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.widget.signupform fieldset button {
+	top: 15px;
+	bottom: auto;
+	
+	@media @mobile {
+		position: relative;
+		top: 0;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+.productlist-search button {
+	top: 0;
+	bottom: auto;
+	
 	@media @mobile {
 		position: relative;
 		width: 100%;
@@ -664,6 +698,10 @@ input.blog-search-input, .widget.signupform input,
 		width: 100%;
 		margin-bottom: 10px;
 	}
+}
+
+.form-group {
+	position: relative;
 }
 
 .advancedcontactform {
@@ -817,7 +855,6 @@ input.blog-search-input, .widget.signupform input,
 	}
 }
 
-
 label {
 	display: block;
 	font-family: @font-swatch5-font-family;
@@ -924,6 +961,93 @@ select {
 		label {
 			display: block;
 		}
+	}
+}
+
+// Privacy Checkboxes
+
+.widget.advancedcontactform .form-group.advancedcontactform__form-group--terms,
+.widget.contactform .form-group.contactform__form-group--terms,
+.widget.signupform .form-group.signupform__form-group--terms {
+	input[type="checkbox"] {
+		opacity: 1;
+		margin: 4px 8px 4px 4px;
+		padding: 0;
+		min-height: auto;
+		min-width: auto;
+		height: auto !important;
+		width: auto !important;
+		line-height: 1em;
+		-webkit-appearance: checkbox;
+		-moz-appearance: checkbox;
+		appearance: checkbox;
+	}
+	
+	label {
+		cursor: pointer;
+		margin-left: 40px;
+		margin-bottom: 10px;
+		padding: 0;
+		display: inline-block!important;
+		line-height: 25px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			min-height: 25px;
+			max-height: 25px;
+			min-width: 25px;
+			max-width: 25px;
+			background-color: white;
+			border: 1px solid @color-swatch2;
+			border-radius: 0;
+			left: -40px;
+			top: 0;
+			.transition( all, 0.3s, ease);
+		}
+		&:hover::before {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			background-color: white;
+			border: 1px solid darken(@color-swatch2, 15%);
+			left: -40px;
+			top: 0;
+			.transition( all, 0.3s, ease);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			opacity: 0;
+			border: 1px solid darken(@color-swatch2, 25%);
+			background: image('/images/hs-icon_check-l.svg') no-repeat center; 
+			background-color: white;
+			left: -40px;
+			top: 0px;
+			.transition( all, 0.3s, ease);
+			transform: none;
+		}
+		.form__link {
+			font-family: @font-swatch5-font-family;
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+			font-weight: @font-swatch5-font-weight;
+			line-height: bkscale(@font-swatch5-line-height, 0.6);
+			margin: 0 0 15px;
+			text-transform: uppercase;
+			letter-spacing: .05em;
+		}
+	}
+	input[type="checkbox"] {
+		visibility: hidden;
+		position: absolute;
+	}
+	input[type="checkbox"]:checked + label:after {
+		opacity: 1;
 	}
 }
 

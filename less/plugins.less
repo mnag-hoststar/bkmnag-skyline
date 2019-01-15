@@ -416,6 +416,12 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 					margin: 8px 0;
 					width: 30%;
 					vertical-align: middle;
+	
+					@media @mobile {
+						width: 100%;
+						margin: 8px 0 4px;
+					}
+					
 					&:after {
 						content: ":";
 						display: inline-block;
@@ -425,6 +431,11 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 				input {
 					width: 70%;
 					float: right;
+	
+					@media @mobile {
+						width: 100%;
+						float: none;
+					}
 				}
 				button {
 					min-width: 0;
