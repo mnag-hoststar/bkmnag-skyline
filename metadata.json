@@ -4,6 +4,7 @@
 	"screenshot":"skyline-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes": ["home", "gallery"],
+	"versionTenCompatible": 1,
 	"tags": {
 	"en": ["clean", "news", "fullscreen", "blog", "travel", "modern", "flexible", "monochrome", "minimalistic", "sans-serif", "parallax"],
 	"es": ["limpio", "noticias", "fullscreen", "blog", "viajes", "moderno", "flexible", "monocromo", "minimalista", "sans-serif", "parallax"],

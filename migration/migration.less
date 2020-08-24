@@ -1,0 +1,106 @@
+
+// -------------------------------------------
+//  Migration Styles -
+//
+//  These changes allow rows to work with
+//  existing templates in BK10
+// -------------------------------------------
+
+
+
+// Template styling resets
+// ------------------------------------
+
+#migrated {
+
+    .bk-pt-home {
+        .row-overlay:before,
+        .row:after {
+            background: transparent;
+        }
+    }
+
+    &.edit {
+        @media only screen and (min-width: 900px) {
+            .bk-header {
+               width: ~"calc(100% - 200px)"; 
+            }
+
+            .widget.extendednavigation a.pull {
+                left: 460px;
+            }
+
+            .widget.extendednavigation .widget-overlay {
+                height: 100px;
+                left: 420px;
+                right: initial;
+                width: 100px;
+            }
+        }
+    }
+
+    .bk-pt-default .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .bk-pt-home .container {
+        @media only screen and (max-width: 1400px) {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+
+// Re-add the reset styles
+// ------------------------------------
+
+
+#migrated {
+
+    // Applies the container value to widgets
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    [data-name="row"] .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;                 // Centers the contained widgets
+        max-width: 1400px;
+        width: ~"calc(100% - 100px)";       // Container padding
+
+        @media @mobile {
+            width: 90%;
+        }
+    }
+
+    // Replaces main padding by moving this to the first widget in the zone
+    &.edit .bk-pt-default #page-zones__main-overlay + .widget:not([data-name="row"]),
+    .bk-pt-default #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 40px;           // Main padding top
+    }
+
+    // Replaces main padding by moving this to the first widget in the zone
+    &.edit .bk-pt-home #page-zones__main-overlay + .widget:not([data-name="row"]),
+    .bk-pt-home #page-zones__main > .widget:not([data-name="row"]):first-child {
+        @media only screen and (max-width: 1400px) {
+            padding-top: 40px;           // Main padding top
+        }
+    }
+
+    // Replaces main padding by moving this to the last widget in the zone
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 40px;        // Main padding bottom
+    }
+
+    // Add spacing to the top of a widget when it follows a row
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]) {
+        margin-top: 40px;           // Widget margin bottom
+    }
+
+    // Re-add widget spacing inside of rows
+    [data-name="row"] .contentgroup__heading + .contentgroup__body,
+    [data-name="row"] .column .widget + .widget {
+        margin-top: 12px;
+    }
+}
