@@ -301,13 +301,13 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	margin-left: 0;
 }
 
-.widget.gallery ul li {
-	width: 33.333%!important;
+.widget.gallery .gallery-widget li {
+	width: 33.333%;
 	@media @tablet {
-		width: 50%!important;
+		width: 50%;
 	}
 	@media @mobile {
-		width: 100%!important;
+		width: 100%;
 	}
 }
 
@@ -342,12 +342,20 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .widget.gallery .inner .image-data {
 	background: fade(@color-swatch4, 65%);
-	display: table-cell!important;
+	.flex-display;
+	.flex-direction(column);
+	.align-items(center);
+	.justify-content(center);
 	opacity: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
 	vertical-align: middle;
 }
 
 .widget.gallery .inner:hover .image-data {
+	.flex-display;
 	.transition( opacity, 0.5s, ease );
 	opacity: 1;
 }
@@ -369,13 +377,49 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 				background-color: transparent;
 				border: 1px solid @color-swatch1;
 				.border-radius(100px);
+
+				.style--light & {
+				    border-color: @color--accent;
+				}
+
+				.style--accent & {
+				    border-color: @contrast--accent;
+				}
+
+				.style--dark & {
+				    border-color: @color--accent;
+				}
 				&:hover {
 					background-color: fade(@color-swatch1, 20%);
 					cursor: pointer;
+
+					.style--light & {
+					    background-color: fade(@color--accent, 20%);
+					}
+
+					.style--accent & {
+					    background-color: fade(@contrast--accent, 20%);
+					}
+
+					.style--dark & {
+					    background-color: fade(@color--accent, 20%);
+					}
 				}
 				&.selected {
 					background-color: @color-swatch1;
 					border: 0;
+
+					.style--light & {
+					    background-color: @color--accent;
+					}
+
+					.style--accent & {
+					    background-color: @contrast--accent;
+					}
+
+					.style--dark & {
+					    background-color: @color--accent;
+					}
 				}
 			}
 		}
@@ -505,7 +549,8 @@ button.btn,
 .widget.blogsearch button,
 .widget.profile form button,
 .widget.signupform fieldset button,
-.advancedcontactform button {
+.advancedcontactform button,
+.contentgroup__link  {
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -516,18 +561,48 @@ button.btn,
 	border: 0;
 	margin: 0;
 	text-decoration: none;
-	padding: 0 40px;
+	padding: 6px 40px;
 	min-height: 40px;
 	min-width: 120px;
 	border: none;
 	text-transform: uppercase;
 	.transition( all, 0.5s, ease);
+
+	.style--light & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
+	.style--accent & {
+	    background-color: @color--dark;
+	    color: @contrast--dark;
+	}
+
+	.style--dark & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
 	
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
 		.transition( all, 0.5s, ease);
 		.border-radius(0px);
+
+		.style--light & {
+		    background-color: @color--dark;
+		    color: @contrast--dark;
+		}
+
+		.style--accent & {
+		    background-color: darken(@color--dark, 20%);
+		    color: @contrast--dark;
+		}
+
+		.style--dark & {
+		    background-color: darken(@color--accent, 20%);
+		    color: @contrast--accent;
+		}
 	}
 }
 
@@ -581,22 +656,54 @@ button.btn,
 // 8.2 TWEET
 // ---------
 
-.widget.tweet a  {
+.widget.tweet a {
 	padding: 10px 30px 10px 60px;
 	border: none;
 	.transition( all, 0.5s, ease);
 	background-image: image('/images/ic-twitter-hover.svg');
 	background-position: 30px;
+	background-repeat: no-repeat;
 	text-transform: uppercase;
 	display: inline-block;
 	height: 40px;
 	text-align: center;
+
+	.style--light & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
+	.style--accent & {
+	    background-color: @color--dark;
+	    color: @contrast--dark;
+	}
+
+	.style--dark & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
 	&:hover {
 		cursor: pointer;
 		border-radius: 0;
 		background-image: image('/images/ic-twitter-hover.svg');
 		background-position: 30px;
 		.transition( all, 0.5s, ease);
+
+		.style--light & {
+		    background-color: @color--dark;
+		    color: @contrast--dark;
+		}
+
+		.style--accent & {
+		    background-color: darken(@color--dark, 20%);
+		    color: @contrast--dark;
+		}
+
+		.style--dark & {
+		    background-color: darken(@color--accent, 20%);
+		    color: @contrast--accent;
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -659,12 +766,43 @@ button.btn,
 	background-image: image('/images/ic-paypal-hover.svg');
 	background-position: 30px;
 	text-transform: uppercase;
+
+	.style--light & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
+	.style--accent & {
+	    background-color: @color--dark;
+	    color: @contrast--dark;
+	}
+
+	.style--dark & {
+	    background-color: @color--accent;
+	    color: @contrast--accent;
+	}
+
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
 		cursor: pointer;
 		color: @color-swatch1;
 		border-radius: 0;
 		.transition( all, 0.5s, ease);
+
+		.style--light & {
+		    background-color: @color--dark;
+		    color: @contrast--dark;
+		}
+
+		.style--accent & {
+		    background-color: darken(@color--dark, 20%);
+		    color: @contrast--dark;
+		}
+
+		.style--dark & {
+		    background-color: darken(@color--accent, 20%);
+		    color: @contrast--accent;
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -687,12 +825,55 @@ input.blog-search-input, .widget.signupform input,
 	height: 40px;
 	width: 70%;
 	.transition( all, 0.3s, ease);
+
+	.style--light & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+		background-color: @color--light;
+		border-color: darken(@color--accent, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--dark, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
 	&:hover {
 		border: 1px solid darken(@color-swatch2, 15%);
 		.transition( all, 0.3s, ease);
+
+		.style--light & {
+			border-color: darken(@color--light, 15%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 15%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 15%);
+		}
 	}
 	&:focus {
 		border: 1px solid darken(@color-swatch2, 25%);
+
+		.style--light & {
+			border-color: darken(@color--light, 25%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 25%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 25%);
+		}
 	}
 	@media @mobile {
 		width: 100%;
@@ -730,6 +911,18 @@ input.blog-search-input, .widget.signupform input,
 				left: -40px;
 				top: 0;
 				.transition( all, 0.3s, ease);
+
+				.style--light & {
+					border-color: darken(@color--light, 10%);
+				}
+
+				.style--accent & {
+					border-color: darken(@color--accent, 10%);
+				}
+
+				.style--dark & {
+					border-color: darken(@color--dark, 10%);
+				}
 			}
 			&:hover::before {
 				content: '';
@@ -741,6 +934,18 @@ input.blog-search-input, .widget.signupform input,
 				left: -40px;
 				top: 0;
 				.transition( all, 0.3s, ease);
+
+				.style--light & {
+					border-color: darken(@color--light, 15%);
+				}
+
+				.style--accent & {
+					border-color: darken(@color--accent, 15%);
+				}
+
+				.style--dark & {
+					border-color: darken(@color--dark, 15%);
+				}
 			}
 			&:after {
 				content: '';
@@ -786,6 +991,18 @@ input.blog-search-input, .widget.signupform input,
 				left: -40px;
 				top: 0;
 				.transition( all, 0.3s, ease);
+
+				.style--light & {
+					border-color: darken(@color--light, 10%);
+				}
+
+				.style--accent & {
+					border-color: darken(@color--accent, 10%);
+				}
+
+				.style--dark & {
+					border-color: darken(@color--dark, 10%);
+				}
 			}
 			&:hover::before {
 				content: '';
@@ -798,6 +1015,18 @@ input.blog-search-input, .widget.signupform input,
 				left: -40px;
 				top: 0;
 				.transition( all, 0.3s, ease);
+
+				.style--light & {
+					border-color: darken(@color--light, 15%);
+				}
+
+				.style--accent & {
+					border-color: darken(@color--accent, 15%);
+				}
+
+				.style--dark & {
+					border-color: darken(@color--dark, 15%);
+				}
 			}
 			&:after {
 				content: '';
@@ -832,6 +1061,18 @@ input.blog-search-input, .widget.signupform input,
 		padding: 0 0 15px;
 		text-transform: uppercase;
 		letter-spacing: .05em;
+
+		.style--light & {
+			color: @contrast--light;
+		}
+
+		.style--accent & {
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 	input {
 		border: 1px solid @color-swatch2;
@@ -873,12 +1114,55 @@ textarea {
 	-webkit-appearance: none;
 	background-color: @color-swatch1;
 	.transition( all, 0.3s, ease);
+
+	.style--light & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+		background-color: @color--light;
+		border-color: darken(@color--accent, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--dark, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
 	&:hover {
 		border: 1px solid darken(@color-swatch2, 15%)!important;
 		.transition( all, 0.3s, ease);
+
+		.style--light & {
+			border-color: darken(@color--light, 15%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 15%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 15%);
+		}
 	}
 	&:focus {
 		border: 1px solid darken(@color-swatch2, 25%)!important;
+
+		.style--light & {
+			border-color: darken(@color--light, 25%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 25%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 25%);
+		}
 	}
 }
 
@@ -900,12 +1184,55 @@ select {
 	background-color: @color-swatch1;
 	text-indent: 14px;
 	.transition( all, 0.3s, ease);
+
+	.style--light & {
+		background-color: @color--light;
+		border-color: darken(@color--light, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+		background-color: @color--light;
+		border-color: darken(@color--accent, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--dark & {
+		background-color: @color--light;
+		border-color: darken(@color--dark, 10%);
+	    color: fade(@contrast--light, 80%);
+	}
+
 	&:hover {
 		border: 1px solid darken(@color-swatch2, 15%);
 		.transition( all, 0.3s, ease);
+
+		.style--light & {
+			border-color: darken(@color--light, 15%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 15%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 15%);
+		}
 	}
 	&:focus {
 		border: 1px solid darken(@color-swatch2, 25%);
+
+		.style--light & {
+			border-color: darken(@color--light, 25%);
+		}
+
+		.style--accent & {
+			border-color: darken(@color--accent, 25%);
+		}
+
+		.style--dark & {
+			border-color: darken(@color--dark, 25%);
+		}
 	}
 	@media @tablet {
 		background-position: 98% center;
@@ -1040,6 +1367,18 @@ select {
 			margin: 0 0 15px;
 			text-transform: uppercase;
 			letter-spacing: .05em;
+
+			.style--light & {
+			    color: @contrast--light;
+			}
+
+			.style--accent & {
+			    color: @contrast--accent;
+			}
+
+			.style--dark & {
+			    color: @contrast--dark;
+			}
 		}
 	}
 	input[type="checkbox"] {
@@ -1119,6 +1458,18 @@ select {
 	p {
 		color: @color-swatch4;
 		padding: 0;
+
+		.style--light & {
+		    color: fade(@contrast--light, 80%);
+		}
+
+		.style--accent & {
+		    color: fade(@contrast--accent, 80%);
+		}
+
+		.style--dark & {
+		    color: fade(@contrast--dark, 80%);
+		}
 	}
 	ul li {
 		padding: 0;
@@ -1144,20 +1495,68 @@ select {
 			font-size: @font-swatch5-font-size;
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
+
+			.style--light & {
+			    color: fade(@contrast--light, 80%);
+			}
+
+			.style--accent & {
+			    color: fade(@contrast--accent, 80%);
+			}
+
+			.style--dark & {
+			    color: fade(@contrast--dark, 80%);
+			}
 		}
 		// Tweet Link
 		/*p a, */ a:hover span.bk-full-name {
 			color: darken(@color-swatch3, 20%);
 			text-decoration: none;
+
+			.style--light & {
+			    color: @contrast--light;
+			}
+
+			.style--accent & {
+			    color: @contrast--accent;
+			}
+
+			.style--dark & {
+			    color: @contrast--dark;
+			}
 		}
 		p a:hover {
 			color: darken(@color-swatch3, 20%);
+
+			.style--light & {
+	    		color: @contrast--light;
+			}
+
+			.style--accent & {
+			    color: @contrast--accent;
+			}
+
+			.style--dark & {
+			    color: @contrast--dark;
+			}
 		}
 		span a {
 			text-decoration: none;
 			&:hover {
 				color: darken(@color-swatch3, 20%);
 				text-decoration: none;
+
+				.style--light & {
+		    		color: @contrast--light;
+				}
+
+				.style--accent & {
+				    color: @contrast--accent;
+				}
+
+				.style--dark & {
+				    color: @contrast--dark;
+				}
 			}
 		}
 		// Extra Info
@@ -1186,6 +1585,18 @@ select {
 hr.line {
 	background-color: fade(@color-swatch6, 10%);
 	margin: 0;
+
+	.style--light & {
+	    color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+	    color: darken(@color--accent, 10%);
+	}
+
+	.style--dark & {
+	    color: darken(@color--dark, 10%);
+	}
 }
 
 // -----------------------------

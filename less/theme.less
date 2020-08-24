@@ -66,10 +66,22 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, blockquote {
 	text-transform: uppercase;
 	padding: 0;
 	line-height: 1em;
+
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
 }
 
 h5 {
@@ -88,6 +100,35 @@ blockquote {
 	font-style: italic;
 	&:before {
 		display: none;
+	}
+}
+
+p, .paragraph, ul, ol, li, .contentgroup__body, label {
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
+}
+
+a {
+	.style--light & {
+	    color: @color--accent;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @color--accent;
 	}
 }
 
@@ -738,12 +779,15 @@ blockquote {
 	right: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
-	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
+	body:not(.edit) & {
+		overflow: auto;
+		overflow-x: hidden;
+	}
 }
 
 // ---------------------------
