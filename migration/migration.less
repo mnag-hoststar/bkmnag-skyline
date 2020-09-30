@@ -15,8 +15,10 @@
 
     .bk-pt-home {
         .row-overlay:before,
-        .row:after {
-            background: transparent;
+        .row-overlay:after {
+            @media only screen and (min-width: 1600px) {
+                background: transparent;
+            }
         }
     }
 
@@ -39,16 +41,17 @@
         }
     }
 
+    .bk-pt-home .container,
     .bk-pt-default .container {
-        max-width: 100%;
         padding: 0;
     }
 
-    .bk-pt-home .container {
-        @media only screen and (max-width: 1400px) {
-            max-width: 100%;
-            padding: 0;
-        }
+    .bk-pt-default .container {
+        max-width: 100%;
+    }
+
+    [data-name="row"] [data-name="responsivecolumns"] + .widget {
+        margin-top: 12px;
     }
 }
 
@@ -83,9 +86,7 @@
     // Replaces main padding by moving this to the first widget in the zone
     &.edit .bk-pt-home #page-zones__main-overlay + .widget:not([data-name="row"]),
     .bk-pt-home #page-zones__main > .widget:not([data-name="row"]):first-child {
-        @media only screen and (max-width: 1400px) {
-            padding-top: 40px;           // Main padding top
-        }
+        padding-top: 40px;           // Main padding top
     }
 
     // Replaces main padding by moving this to the last widget in the zone
