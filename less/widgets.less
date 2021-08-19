@@ -168,8 +168,6 @@
 			}
 			a {
 				.transition(all, 0.5s, ease);
-				&:hover {
-				}
 			}
 		}
 	}
@@ -281,8 +279,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 	}
 	button {
 		padding: 0 40px;
-		&:hover {
-		}
+
 		@media @mobile {
 			width: 100%;
 			margin-top: 10px;
@@ -367,8 +364,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 .widget {
 	&.responsiveslideshow {
 		margin-top: 20px;
-		.slideshow-widget-wrapper {
-		}
+
 		.slideshow-widget-controls {
 			.dot {
 				height: 10px;
@@ -531,8 +527,6 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 					right: 10px;
 				}
 			}
-		}
-		.slideshow-image-list {
 		}
 	}
 }
@@ -882,6 +876,7 @@ select {
 			border-color: darken(@color--dark, 25%);
 		}
 	}
+	
 	@media @mobile {
 		width: 100%;
 		margin-bottom: 10px;
@@ -894,6 +889,7 @@ select {
 
 .advancedcontactform {
 	margin: 0 0 40px 0;
+
 	.form-group {
 		margin-bottom: 30px;
 	}
@@ -936,6 +932,7 @@ select {
 					border-color: darken(@color--dark, 10%);
 				}
 			}
+
 			&:hover::before {
 				content: '';
 				position: absolute;
@@ -959,6 +956,7 @@ select {
 					border-color: darken(@color--dark, 15%);
 				}
 			}
+
 			&:after {
 				content: '';
 				position: absolute;
@@ -1003,21 +1001,24 @@ select {
 				background-size: 17px;
 			}
 		}
+
 		input[type="radio"] {
 			visibility: hidden;
 			position: absolute;
 		}
+
 		input[type="radio"]:checked + label:after {
 			opacity: 1;
 		}
 	}
+
 	label {
 		display: block!important;
 		font-family: @font-swatch5-font-family;
 		font-size: bkscale(@font-swatch5-font-size, 0.8);
 		font-weight: @font-swatch5-font-weight;
 		line-height: bkscale(@font-swatch5-line-height, 0.6);
-		padding: 0 0 15px;
+		margin: 0 0 15px;
 		text-transform: uppercase;
 		letter-spacing: .05em;
 
@@ -1033,6 +1034,7 @@ select {
 			color: @contrast--dark;
 		}
 	}
+
 	input {
 		border: 1px solid @color-swatch2;
 		text-indent: 8px;
@@ -1093,9 +1095,11 @@ select {
 .widget {
 	&.contactform {
 		margin: 0 0 50px 0;
+
 		fieldset {
 			margin: 0;
 		}
+
 		label {
 			display: block;
 			font-family: @font-swatch5-font-family;
@@ -1106,9 +1110,11 @@ select {
 			text-transform: uppercase;
 			letter-spacing: .05em;
 		}
+
 		input, textarea {
 			margin-bottom: 25px;
 		}
+
 		button.btn {
 			@media @mobile {
 				width: 100%;
