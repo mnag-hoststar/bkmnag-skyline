@@ -1,58 +1,16 @@
-// ------------------------------------
 // BaseKit Standard Theme: LESS > Theme
-// ------------------------------------
-
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-
-// 1. #TYPOGRAPHY 
-// 2. #LANGUAGE SELECTOR
-// 3. #HEADER
-// 4. #NAVIGATION
-// 5. #PARALLAX
-// 6. #MAIN & CONTAINER
-// 7. #FOOTER
-
-// Colour Swatches
-// ---------------
-
-// @color-swatch1: Background
-// @color-swatch2: Contrast
-// @color-swatch3: Buttons
-// @color-swatch4: Headings
-// @color-swatch5: Paragraph
-// @color-swatch6: Navigation Links
-// @color-swatch7: Spare
 
 // Colour Variables
-// ----------------
 
-@bg-color: @color-swatch1;          // Background
-@contrast-color: @color-swatch2;    // Contrast Colour
-@button-color: @color-swatch3;      // Button BG Colour
-@heading-color: @color-swatch4;     // Heading Text Colour (H1 - H4)
-@paragraph-color: @color-swatch5;   // Paragraph Text Colour
-@nav-color: @color-swatch6;         // Nav Link Colour
-@spare-color: @color-swatch7;       // Spare Colour
+@bg-color: @color-swatch1;
+@contrast-color: @color-swatch2;
+@button-color: @color-swatch3;
+@heading-color: @color-swatch4;
+@paragraph-color: @color-swatch5;
+@nav-color: @color-swatch6;
+@spare-color: @color-swatch7;
 
-// Font Swatches
-// -------------
-
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
-
-// ---------------------------
-// 1. #TYPOGRAPHY
-// ---------------------------
+// TYPOGRAPHY
 
 body {
 	background-color: @color-swatch2;
@@ -95,6 +53,7 @@ blockquote {
 	font-family: @font-swatch9-font-family;
 	font-size: @font-swatch4-font-size;
 	font-style: italic;
+
 	&:before {
 		display: none;
 	}
@@ -132,9 +91,7 @@ a {
 	list-style-position: inherit;
 }
 
-// ---------------------------
-// 2. #LANGUAGE SELECTOR
-// ---------------------------
+// LANGUAGE SELECTOR
 
 @language-padding: 0.5em;
 @language-line-height: @font-swatch7-line-height;
@@ -162,6 +119,7 @@ a {
 	&.language-selector--light {
 		background-color: @color-swatch2;
 	}
+
 	&.language-selector--dark {
 		background-color: lighten(@color-swatch6, 5%);
 	}
@@ -185,6 +143,7 @@ a {
     	color: @font-swatch7-color;
     	text-transform: uppercase;
     }
+	
     &.language-selector--hide {
         opacity: 0;
     }
@@ -268,7 +227,7 @@ a {
 			background-color: @color-swatch3;
 			
 			&:hover {
-					background-color: @color-swatch4;
+				background-color: @color-swatch4;
 			}
 			
 			&--current {
@@ -392,9 +351,11 @@ a {
 		box-sizing: content-box;
 		line-height: @language-line-height;
 	}
+
 	.language-selector.language-selector--flag-text & {
 		margin: 0;
 	}
+
 	.language-selector.language-selector--dropdown.language-selector--flag-text & {
 		float: left;
 		box-sizing: border-box;
@@ -410,10 +371,12 @@ a {
 		display: inline-block;
 		padding: @language-padding*1.5 0 @language-padding*1.5 @language-padding;
 	}
+
 	.language-selector.language-selector--text &,
 	.language-selector.language-selector--flag & {
 		padding: @language-padding*1.5 0;
 	}
+
 	.language-selector.language-selector--text & {
 		display: block;
 	}
@@ -439,33 +402,36 @@ a {
 		.language-selector--light& {
 			color: @color-swatch1;
 		}
+
 		.language-selector--dark& {
 			color: @color-swatch1;
 		}
 	}
+
 	.language-selector.language-selector--dropdown .language-selector__item &,
 	.language-selector.language-selector--dropdown .language-selector__item:hover &,
 	.language-selector.language-selector--dropdown .language-selector__item--current:hover & {
 		.language-selector--light& {
 			color: @color-swatch1;
 		}
+
 		.language-selector--dark& {
 			color: @color-swatch1;
 		}
 	}
+
 	.language-selector.language-selector--dropdown .language-selector__item--current & {
 		.language-selector--light& {
 			color: @color-swatch1;
 		}
+
 		.language-selector--dark& {
 			color: @color-swatch1;
 		}
 	}
 }
 
-// ---------------------------
-// 3. #HEADER
-// ---------------------------
+// HEADER
 
 .bk-header {
 	background: lighten(@color-swatch6, 5%);
@@ -482,9 +448,7 @@ a {
 	}
 }
 
-// ---------------------------
-// 4. #NAVIGATION
-// ---------------------------
+// NAVIGATION
 
 .bk-nav {
     z-index: 300;
@@ -508,15 +472,19 @@ a {
 		left: -100%;
 		width: 100%;
 	}
+
 	.widget.profile {
 		padding: 30px 15px;
 		margin: auto 0 0;
+
 		.bk-profile-socialicons {
 			margin: 0;
+
 			span a {
 				margin: 0;
 			}
 		}
+
 		.bk-socialicons-linkedin a {
 			background-image: image('/images/social/socialicons-linkedin.svg');
 		}
@@ -554,7 +522,6 @@ a {
 	flex-direction: column;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
-
 }
 
 
@@ -566,6 +533,7 @@ a {
 	@media @mobile {
 		left: 80%;
 	}
+
 	&:after {
 		-ms-transform: rotate(45deg); /* IE 9 */
 		-moz-transform: rotate(45deg); /* Mozilla */
@@ -575,9 +543,7 @@ a {
 	}
 }
 
-// ---------------------------
-// 5. #PARALLAX
-// ---------------------------
+// PARALLAX
 
 .parallax {
 	-webkit-perspective: 303px;
@@ -587,10 +553,12 @@ a {
 	overflow: auto;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
+
 	@media @tablet {
 		height: 100%;
 	}
 }
+
 .parallax_layer {
 	position: absolute;
 	top: 0;
@@ -607,6 +575,7 @@ a {
 .parallax_layer-back {
 	-webkit-transform: translateZ(-300px) scale(2.1);
 	transform: translateZ(-300px) scale(2.1);
+	
 	@media @mobile {
 		transform: inherit;
 		-webkit-transform: inherit;
@@ -615,19 +584,19 @@ a {
 
 .parallax_group {
 	position: relative;
-	height: 500px; /* fallback for older browsers */
+	height: 500px;
 	height: 100vh;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
+
 	@media @tablet {
 		height: 100%;
 	}
 }
 
 // HOME parallax
-// -------------
 
 #group1 {
 	z-index: 5;
@@ -640,7 +609,6 @@ a {
 }
 
 // Gallery parallax
-// ----------------
 
 #group3 {
 	z-index: 5;
@@ -651,33 +619,37 @@ a {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+
 	.widget.responsiveslideshow {
 		margin-top: 0;
 		height: 100%;
+
 		.slideshow-widget, .slideshow-image-list {
-			//min-height: 800px;
 			height: 65vh;
+
 			.crop span.inner {
 				background-size: cover;
 			}
 		}
+
 		.slideshow-widget-controls {
 			position: absolute;
 			bottom: 140px;
 			left: 0;
 			right: 0;
+			
 			@media @tablet {
 				bottom: 40px;
 			}
+
 			@media @mobile {
 				bottom: 30px;
 			}
 		}
+
 		.content-wrapper {
 			background-color: transparent;
 			display: table;
-			//-webkit-flex-direction: column-reverse;
-			//flex-direction: column-reverse;
 			width: 100%;
 			max-width: 1200px;
 			top: 50%;
@@ -685,16 +657,18 @@ a {
 			right: 0;
 			transform: translate(-50%, -50%);
 			-webkit-transform: translate(-50%, -50%);
-			//height: 100px;
+
 			@media @mobile {
 				padding: 0 40px;
 			}
+
 			span {
 				text-align: center;
 				display: inline-block;
 				color: @color-swatch1;
 				width: 100%;
 			}
+
 			.title {
 				font-family: @font-swatch8-font-family;
 				font-weight: @font-swatch8-font-weight;
@@ -705,15 +679,18 @@ a {
 				text-transform: uppercase;
 				display: table-footer-group;
 				height: 80px;
+
 				@media @tablet {
 					font-size: bkscale(@font-swatch8-font-size, 0.85);
 					line-height: bkscale(@font-swatch8-line-height, 0.85);
 				}
+
 				@media @mobile {
 					font-size: bkscale(@font-swatch8-font-size, 0.7);
 					line-height: bkscale(@font-swatch8-line-height, 0.7);
 				}
 			}
+
 			.description {
 				font-family: @font-swatch9-font-family;
 				font-weight: @font-swatch9-font-weight;
@@ -723,10 +700,12 @@ a {
 				letter-spacing: @font-swatch9-letter-spacing;
 				font-style: italic;
 				display: table-header-group;
+
 				@media @tablet {
 					font-size: bkscale(@font-swatch9-font-size, 0.9);
 					line-height: bkscale(@font-swatch9-line-height, 0.9);
 				}
+
 				@media @mobile {
 					font-size: bkscale(@font-swatch9-font-size, 0.8);
 					line-height: bkscale(@font-swatch9-line-height, 0.8);
@@ -736,9 +715,7 @@ a {
 	}
 }
 
-// ---------------------------
-// 6. #MAIN & CONTAINER
-// ---------------------------
+// MAIN & CONTAINER
 
 .container {
 	padding: 50px;
@@ -746,6 +723,7 @@ a {
 	max-width: 1400px;
 	position: relative;
 	background-color: @color-swatch2;
+
 	@media @mobile {
 		padding: 40px;
 	}
@@ -758,9 +736,11 @@ a {
 .bk-pt-default .container {
 	top: 100px;
 	margin-bottom: 100px;
+
 	@media @tablet {
 		top: 100px;
 	}
+
 	@media @mobile {
 		top: 90px;
 	}
@@ -786,9 +766,7 @@ a {
 	}
 }
 
-// ---------------------------
-// 7. #FOOTER
-// ---------------------------
+// FOOTER
 
 .bk-footer {
 	display: table;
@@ -796,6 +774,7 @@ a {
 	padding: 40px;
 	border-top: 1px solid fade(@color-swatch6, 10%);
 	position: relative;
+
 	.copyright {
 		text-align: left;
 		
@@ -803,20 +782,24 @@ a {
 			padding-bottom: 20px;
 		}
 	}
+
 	.socialicons {
 		float: right;
 		margin: 0!important;
 		opacity: 0.6;
 	}
+
 	.copyright, .socialicons {
 		display: table-cell;
 		vertical-align: middle;
+
 		@media @mobile {
 			display: block;
 			width: 100%;
 			text-align: center;
 		}
 	}
+	
 	.widget.profile .bk-profile-socialicons {
 		margin: 0;
 	}
