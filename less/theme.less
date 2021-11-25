@@ -803,6 +803,34 @@ a {
 	.widget.profile .bk-profile-socialicons {
 		margin: 0;
 	}
+
+	.widget.profile {
+		.form-group {
+			display: flex;
+			align-items: center;
+
+			@media @mobile {
+				display: block;
+			}
+		}
+
+        form fieldset input {
+            width: 100%;
+        }
+
+        form button {
+			position: static;
+            word-break: break-word;
+            height: auto;
+            width: auto;
+            line-height: 1.25em;
+
+			@media @mobile {
+				width: 100%;
+				margin: 10px 0;	
+			}
+        }
+	}
 }
 
 .bk-footer .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.profile .bk-profile-socialicons span a:hover {
