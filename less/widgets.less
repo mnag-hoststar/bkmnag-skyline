@@ -145,6 +145,7 @@
 				.text {
 					color: @font-swatch6-color;
 					.transition(all, 0.5s, ease);
+					word-break: break-word;
 				}
 			}
 
@@ -625,8 +626,15 @@ button.btn,
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	word-break: break-word;
 	
 	@media @mobile {
+		position: relative;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	
+	.responsivecolumns & {
 		position: relative;
 		width: 100%;
 		margin-bottom: 10px;
@@ -824,6 +832,10 @@ select {
 	.transition( all, 0.3s, ease);
 	
 	@media @mobile {
+		width: 100%;
+	}
+	
+	.responsivecolumns & {
 		width: 100%;
 	}
 
@@ -1084,8 +1096,8 @@ select {
 	text-transform: uppercase;
 	background-image: image('/images/arrow-small-down.svg');
 	background-repeat: no-repeat;
-    background-position: right 0.25em center;
-    background-size: 2.5em;
+    background-position: right 3px center;
+    background-size: 32px;
 
 	@media @mobile {
 		width: 100% !important;
