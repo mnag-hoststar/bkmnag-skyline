@@ -451,91 +451,200 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 
 // E-COMMERCE
 
-.widget.ecomproductslist {
-	.ecom-productslist-product a {
-		text-decoration: none;
-	}
+.widget.ecomproductslist  {
+    margin: 0 -10px;
 
-	.productlist-filter {
-		.productlist-display-form {
-			.form-group {
-				width: 100%;
+    .productlist-filter {
+        margin: 0 10px;
 
+        .productlist-display-form {
+            padding: 10px 0;
+            
+            input[type=search] {
+                margin: 0;
+            }
+
+            .form-group {
+                display: flex;
+                align-items: center;
+                margin: 0 0 10px 0;
+                                
+                @media @mobile {
+                    display: block;
+                }
+                            
+                .responsivecolumns & {
+                    display: block;
+                }
+
+                label {
+                    text-align: left;
+                    display: block;
+                    width: 20%;
+					margin: 0;
+                    padding: 0;
+                                
+                    @media @mobile {
+                        display: block;
+						margin: 15px 0 5px;
+                        width: 100%;
+                    }
+                                
+                    .responsivecolumns & {
+                        display: block;
+						margin: 15px 0 5px;
+                        width: 100%;
+                    }
+                }
+                
+                select, input[type=search] {
+                    width: 60%;
+                    flex-grow: 2;
+                                
+                    @media @mobile {
+                        display: block;
+                        width: 100%;
+                    }
+                                
+                    .responsivecolumns & {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+				
 				select {
-					width: 70%;
-					float: right;
-					@media @tablet {
+					color: @font-swatch5-color;
+					font-size: @font-swatch7-font-size;
+					border: 1px solid darken(@color-swatch1, 10%);
+					padding: 10px 32px 10px 5px;
+					
+					@media @mobile {
 						margin-left: 0;
 					}
 				}
 
-				label {
-					display: inline-block;
-					margin: 8px 0;
-					width: 30%;
-					vertical-align: middle;
-	
-					@media @mobile {
-						width: 100%;
-						margin: 8px 0 4px;
-					}
+                button.btn {
+                    line-height: 24px;
+                    font-size: 14px;
+                    padding: 8px 30px;
+                    display: inline-block;
+                    cursor: pointer;
+                    margin: 0;
+                }
+		
+				&.productlist-search {
+                    display: flex;
+                    align-items: center;
+					position: static;
+					float: none;
+					width: 100%;
+                                
+                    @media @mobile {
+                        display: block;
+                    }
+                                
+                    .responsivecolumns & {
+                        display: block;
+                    }
+		
+					input {
+						flex-grow: 1;
+                        border-right-width: 0;
 					
-					&:after {
-						content: ":";
-						display: inline-block;
-						position: relative;
+						@media @mobile {
+							width: 100%;
+                            border-right-width: 1px;
+						}
+
+                        .responsivecolumns & {
+                            width: 100%;
+                            border-right-width: 1px;
+                        }
+                    }
+				
+					button.btn {
+                        position: static;
+                        width: 20%;
+
+						@media @mobile {
+                            margin: 10px 0;
+                            width: 100%;
+						}
+
+                        .responsivecolumns & {
+                            margin: 10px 0;
+                            width: 100%;
+                        }
 					}
-				}
+                }
+            }
+        }
 
-				input {
-					width: 70%;
-					float: right;
-	
-					@media @mobile {
-						width: 100%;
-						float: none;
-					}
-				}
-				button {
-					min-width: 0;
-					padding: 0;
-				}
-			}
-		}
-	}
+        // Ecommerce Filter Forms
 
-	.ecom-productslist-image-wrap {
-		margin-bottom: 20px;
-		background-color: transparent;
-	}
+        .form-group.productlist-search {
+            position: relative;
+            margin: 0 0 20px;
 
-	.ecom-productlist-info {
-		h2 {
-			padding-bottom: 5px;
-		}
+            input[type=search] {
+                padding-right: 100px;
+                box-sizing: border-box;
+            }
 
-		span {
-			font-size: bkscale(@font-swatch2-font-size, 0.8);
-		}
-	}
-}
+            button {
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+            }
+        }
 
-.productlist-search {
-	input {
-		@media @mobile {
-			display: inline-block;
-			margin-right: 0;
-			width: 100%;
-		}
-	}
+        label {
+            display: inline-block;
+            padding-bottom: .4em;
+        }
 
-	button {
-		@media @mobile {
-			display: inline-block;
-			width: 100%;
-			vertical-align: top;
-		}
-	}
+        select {
+            &::-ms-expand {
+                display: none;
+            }
+        }
+    }
+
+	// Product List
+
+    .ecom-productslist {
+        &-products {
+            margin-left: 0;
+            max-width: none;
+            overflow: hidden;
+        }
+
+        &-product {
+            display: block;
+            float: left;
+            width: 100%/3;
+            margin: 0 0 60px;
+            padding: 0 10px;
+            overflow: auto;
+            
+            @media @tablet {
+                width: 100%/2;
+            }
+            
+            @media @mobile {
+                width: 100%;
+            }
+
+            .responsivecolumns & {
+                width: 100%;
+            }
+        }
+
+        &-image-wrap {
+            background-position: center;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .widget.ecomproduct {
