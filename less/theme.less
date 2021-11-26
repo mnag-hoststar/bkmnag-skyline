@@ -769,34 +769,39 @@ a {
 // FOOTER
 
 .bk-footer {
-	display: table;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	width: 100%;
-	padding: 40px;
+	padding: 40px 50px;
 	border-top: 1px solid fade(@color-swatch6, 10%);
-	position: relative;
+	max-width: 1400px;
+	margin: 0 auto;
+		
+	@media @mobile {
+		display: block;
+		padding: 40px;
+	}
 
 	.copyright {
 		text-align: left;
+		flex-grow: 1;
+		max-width: 50%;
 		
 		@media @mobile {
 			padding-bottom: 20px;
+			max-width: 100%;
 		}
 	}
 
 	.socialicons {
-		float: right;
 		margin: 0!important;
 		opacity: 0.6;
-	}
-
-	.copyright, .socialicons {
-		display: table-cell;
-		vertical-align: middle;
-
+		max-width: 50%;
+		
 		@media @mobile {
-			display: block;
-			width: 100%;
-			text-align: center;
+			padding-bottom: 20px;
+			max-width: 100%;
 		}
 	}
 	
