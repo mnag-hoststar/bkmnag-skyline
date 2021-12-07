@@ -38,6 +38,7 @@
 					display: none;
 				}
 			}
+
 			.blog-post-title {
 				font-family: @font-swatch1-font-family;
 				font-weight: @font-swatch1-font-weight;
@@ -291,7 +292,9 @@
 	}
 }
 
-button.btn.facebook, button.btn.twitter, button.btn.googleplus {
+button.btn.facebook,
+button.btn.twitter,
+button.btn.googleplus {
 	margin: 10px 0;
 	min-width: 0;
 	padding: 0 24px;
@@ -374,22 +377,24 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 		}
 	}
 
-	.menu-item-nutritional-title {
-		font-size: bkscale(@font-swatch5-font-size, 0.86);
+	.menu-item {
+		&-nutritional-title {
+			font-size: bkscale(@font-swatch5-font-size, 0.86);
 
-		&:before {
-			content: "\2014";
-			color: darken(@color-swatch2, 20%);
-			display: block;
-			padding-bottom: 8px;
-			padding-top: 8px;
-			line-height: 8px;
+			&:before {
+				content: "\2014";
+				color: darken(@color-swatch2, 20%);
+				display: block;
+				padding-bottom: 8px;
+				padding-top: 8px;
+				line-height: 8px;
+			}
 		}
-	}
 
-	.menu-item-nutritional-prop  {
-		font-size: bkscale(@font-swatch5-font-size, 0.9);
-		line-height: @font-swatch5-line-height;
+		&-nutritional-prop  {
+			font-size: bkscale(@font-swatch5-font-size, 0.9);
+			line-height: @font-swatch5-line-height;
+		}
 	}
 
 	.menu-section-item-dietary-props .dietary-icon {
@@ -397,7 +402,8 @@ button.btn.facebook, button.btn.twitter, button.btn.googleplus {
 		font-size: bkscale(@font-swatch5-font-size, 1.12);
 	}
 
-	.menu-subsection-promoted, .menu-items li.menu-item-promoted {
+	.menu-subsection-promoted,
+	.menu-items li.menu-item-promoted {
 		background-color: lighten(@color-swatch2, 10%);
 		border: 1px solid darken(@color-swatch2, 5%);
 		padding: 2em;
