@@ -7,8 +7,14 @@
 
 // Includes
 
+@desktop-medium: ~"only screen and (min-width: 1600px)";
+@tablet-large: ~"only screen and (min-width: 900px)";
 @tablet: ~"only screen and (max-width: 850px)";
+@mobile-large: ~"only screen and (max-width: 650px)";
 @mobile: ~"only screen and (max-width: 600px)";
+@mobile-small: ~"only screen and (max-height: 450px)";
+@mobile-smaller: ~"only screen and (max-height: 420px)";
+@mobile-smallest: ~"only screen and (max-width: 380px)";
 
 // Mixins
 
@@ -26,9 +32,9 @@
 
 .transition (@prop: all, @time: 0.5s, @ease: ease) {
 	-webkit-transition: @prop @time @ease;  
-	-moz-transition:    @prop @time @ease;
-	-ms-transition:     @prop @time @ease; 
-	-o-transition:      @prop @time @ease;  
+	-moz-transition: @prop @time @ease;
+	-ms-transition: @prop @time @ease; 
+	-o-transition: @prop @time @ease;  
 }
 
 // Scrollbars
