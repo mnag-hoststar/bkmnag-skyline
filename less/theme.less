@@ -49,15 +49,25 @@ h5 {
 	letter-spacing: @font-swatch4-letter-spacing;
 }
 
-blockquote {
-	margin: 0;
-	padding: 0;
-	font-family: @font-swatch9-font-family;
-	font-size: @font-swatch4-font-size;
-	font-style: italic;
+// Normal Text
 
-	&:before {
-		display: none;
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	&.content {
+		color: @font-swatch5-color;
+	
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 }
 
@@ -95,6 +105,62 @@ a {
 
 .content .bk-content-text ol {
 	list-style-position: inherit;
+}
+
+// Preformatted and Code Text
+
+pre, code {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: none;
+	.border-radius(0);
+	background-color: darken(@color-swatch1, 10%);
+	overflow: auto;
+	.paragraph;
+	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
+	}
+}
+
+code {
+	border-left: 1px solid @color-swatch5;
+
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
+}
+
+// Blockquote
+
+blockquote {
+	margin: 0;
+	padding: 0;
+	font-family: @font-swatch9-font-family;
+	font-size: @font-swatch4-font-size;
+	font-style: italic;
+
+	&:before {
+		display: none;
+	}
 }
 
 // LANGUAGE SELECTOR
