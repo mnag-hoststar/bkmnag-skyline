@@ -554,6 +554,7 @@ button.btn,
 .widget.profile form button,
 .widget.signupform fieldset button,
 .advancedcontactform button,
+.userregistration fieldset .userregistrationbtn,
 .contentgroup__link  {
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
@@ -836,6 +837,7 @@ input,
 .widget.signupform fieldset input,
 input.blog-search-input, .widget.signupform input,
 .widget.blogsearch input,
+.userregistration fieldset input,
 select {
 	border: 1px solid darken(@color-swatch2, 5%);
 	border-radius: 0;
@@ -1176,6 +1178,42 @@ select {
 
 		label {
 			display: block;
+		}
+	}
+}
+
+// REGISTERATION FORM
+
+.widget.userregistration {
+	fieldset {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		max-width: 400px;
+		
+		@media @mobile {
+			max-width: none;
+		}
+
+		.responsivecolumns & {
+			max-width: none;
+		}
+
+		input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.error {
+			padding: 20px 0 0;
+
+			&[style*="display: block"] {
+				padding: 20px 0;
+			}
+
+			&[style*="display: none"] {
+				display: block !important;
+			}
 		}
 	}
 }
