@@ -685,47 +685,64 @@ button.btn.googleplus {
 // Single Product
 
 .widget.ecomproduct {
-	.ecom-product .btn {
-		margin: 20px 20px 0 0;
-	}
+	.ecom-product {
+		&-add-to-cart-btn-wrapper, 
+		&-go-to-checkout-btn-wrapper.js-ecom-product-go-to-checkout-btn-wrapper {
+			display: table-cell;
+		}
+	
+		&-go-to-checkout-btn-wrapper.js-ecom-product-go-to-checkout-btn-wrapper {
+			@media @mobile {
+				padding-left: 20px;
+			}
+		}
+		
+		&-title {
+			font-size: @font-swatch2-font-size;
+			margin-top: 10px;
+		}
+	
+		a.btn.ecom-product-go-to-checkout-btn {
+			background: transparent;
+			color: @color-swatch3;
+			padding: 0;
+		}
 
-	.ecom-product-add-to-cart-btn-wrapper, 
-	.ecom-product-go-to-checkout-btn-wrapper.js-ecom-product-go-to-checkout-btn-wrapper {
-		display: table-cell;
-	}
-
-	.ecom-product-go-to-checkout-btn-wrapper.js-ecom-product-go-to-checkout-btn-wrapper {
-		@media @mobile {
-			padding-left: 20px;
+		.btn {
+			margin: 20px 20px 0 0;
+	
+			&.ecom-product-add-to-cart-btn .text:before {
+				display: none;
+			}
+		}
+	
+		.ecom-product-info .ecom-product-variation select {
+			width: 100%;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-o-appearance: none;
+			-ms-appearance: none;
+		}
+	
+		.ecom-product-preview-image-wrap {
+			background-position: -10000px;
 		}
 	}
 	
-	.ecom-product-title {
-		font-size: @font-swatch2-font-size;
-		margin-top: 10px;
-	}
+	.product-actions {
+		button {
+			margin-bottom: 1em;
+			text-align: center;
+        
+			@media @mobile {
+				width: 100%;
+			}
 
-	a.btn.ecom-product-go-to-checkout-btn {
-		background: transparent;
-		color: @color-swatch3;
-		padding: 0;
-	}
-
-	.ecom-product .btn.ecom-product-add-to-cart-btn .text:before {
-		display: none;
-	}
-
-	.ecom-product .ecom-product-info .ecom-product-variation select {
-		width: 100%;
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		-o-appearance: none;
-		-ms-appearance: none;
-	}
-
-	.ecom-product .ecom-product-preview-image-wrap {
-		background-position: -10000px;
+			&:before {
+				float: none;
+			}
+		}
 	}
 }
 
