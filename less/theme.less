@@ -162,11 +162,28 @@ code {
 // Blockquote
 
 blockquote {
-	margin: 0;
-	padding: 0;
+	margin: 2em 0;
+	padding: 2em !important;
 	font-family: @font-swatch9-font-family;
 	font-size: @font-swatch4-font-size;
 	font-style: italic;
+	background: fade(@font-swatch5-color, 10%);
+	color: @font-swatch5-color;
+
+	.style--light & {
+	    background: fade(@contrast--light, 10%);
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+	    background: fade(@contrast--accent, 10%);
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    background: fade(@contrast--dark, 10%);
+		color: @contrast--dark;
+	}
 
 	&:before {
 		display: none;
