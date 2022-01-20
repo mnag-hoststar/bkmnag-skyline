@@ -294,70 +294,74 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .widget.gallery {
 	margin-left: 0;
-}
 
-.widget.gallery .gallery-widget li {
-	width: 33.333%;
+	.gallery-widget li {
+		width: 100%/3;
+		
+		@media @tablet {
+			width: 100%/2;
+		}
 	
-	@media @tablet {
-		width: 50%;
+		@media @mobile {
+			width: 100%;
+		}
+	
+		.responsivecolumns & {
+			width: 100%;
+		}
 	}
-
-	@media @mobile {
-		width: 100%;
+	
+	ul li .inner {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+	
+		a {
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
 	}
-}
-
-.widget.gallery ul li .inner {
-	left: 0;
-	right: 0;
-	bottom: 0;
-	top: 0;
-
-	a {
-		display: table;
-		width: 100%;
-		height: 100%;
+	
+	ul li span.inner {
+		text-align: center;
+	
+		.title {
+			color: @color-swatch1;
+			font-family: @font-swatch3-font-family;
+			font-weight: @font-swatch3-font-weight;
+			font-size: @font-swatch3-font-size;
+			text-transform: uppercase;
+		}
+	
+		.description {
+			color: @color-swatch1;
+			font-family: @font-swatch5-font-family;
+			font-weight: @font-swatch5-font-weight;
+			font-size: @font-swatch5-font-size;
+		}
 	}
-}
-
-.widget.gallery ul li span.inner {
-	text-align: center;
-
-	.title {
-		color: @color-swatch1;
-		font-family: @font-swatch3-font-family;
-		font-weight: @font-swatch3-font-weight;
-		font-size: @font-swatch3-font-size;
-		text-transform: uppercase;
+	
+	.inner .image-data {
+		background: fade(@color-swatch4, 65%);
+		.flex-display;
+		.flex-direction(column);
+		.align-items(center);
+		.justify-content(center);
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		vertical-align: middle;
 	}
-
-	.description {
-		color: @color-swatch1;
-		font-family: @font-swatch5-font-family;
-		font-weight: @font-swatch5-font-weight;
-		font-size: @font-swatch5-font-size;
+	
+	.inner:hover .image-data {
+		.flex-display;
+		.transition( opacity, 0.5s, ease );
+		opacity: 1;
 	}
-}
-
-.widget.gallery .inner .image-data {
-	background: fade(@color-swatch4, 65%);
-	.flex-display;
-	.flex-direction(column);
-	.align-items(center);
-	.justify-content(center);
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	vertical-align: middle;
-}
-
-.widget.gallery .inner:hover .image-data {
-	.flex-display;
-	.transition( opacity, 0.5s, ease );
-	opacity: 1;
 }
 
 // SLIDESHOW
