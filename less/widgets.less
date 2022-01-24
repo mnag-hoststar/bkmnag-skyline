@@ -45,9 +45,59 @@
 
 // NAVIGATION
 
+.widget.navigation,
 .widget.extendednavigation {
 	padding: 30px 15px;
 	text-transform: uppercase;
+
+	.bk-overlay {
+		width: 100%;
+	}
+
+	.extendednavigation {
+
+        // Mobile Menu
+
+		a.pull {
+			opacity: .5;
+			position: absolute;
+			left: 360px;
+			top: 30px; 
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			overflow: hidden;
+			cursor: pointer;
+			outline: none;
+			.transition(all, 0.5s, ease);
+
+			&:hover {
+				opacity: 1;
+			}
+
+			@media @mobile {
+				left: 110%;
+				top: 25px;
+			}
+
+			&:after {
+				position: absolute;
+				width: 40px;
+				height: 40px;
+				content: '';
+				background-image: image('/images/ic-nav.svg');
+				background-size: 40px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-color: transparent;
+
+				@media @tablet {
+					background-color: transparent!important;
+					box-shadow: none!important;
+				}
+			}
+		}
+	}
 	
 	// Widget overlay
 
@@ -66,6 +116,8 @@
 	        padding: 0;
 	    }
 	}
+
+	// Menu Points
 	
 	ul {
 		display: block;
@@ -76,6 +128,8 @@
 		@media @tablet {
 			display: block;
 		}
+
+		// Menu Point
 
 		li {
 			display: block;
@@ -95,8 +149,55 @@
 				line-height: 1em;
 			}
 
-			&:hover { 
-				ul {
+			a {
+				.transition(all, 0.5s, ease);
+			}
+
+			// Folder
+
+			&.folder {
+				color: @font-swatch6-color;
+	
+				@media @tablet {
+					border-bottom: none;
+				}
+	
+				&:after {
+					content: none;
+				}
+				
+				> .text {
+					color: @font-swatch6-color;
+					.transition(all, 0.5s, ease);
+					word-break: break-word;
+
+					// Folder Arrow
+
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 50%;
+						right: 0.5em;
+						border: 2px solid fade(@font-swatch6-color, 60%);
+						border-top: transparent;
+						border-left: transparent;
+						transform: rotate(45deg);
+						margin-top: -0.5em;
+						width: 0.5em;
+						height: 0.5em;
+					}
+				
+					&:hover:after {
+						border-color: @font-swatch6-color-hover;
+					}
+				}
+
+				// Dropdown
+
+				> ul,
+				&:hover > ul {
+					display: none;
 					color: @font-swatch6-color-hover;
 					background: transparent;
 					border: 2px solid fade(@color-swatch1, 10%);
@@ -104,6 +205,10 @@
 					margin-left: 20px;
 					margin-top: 8px;
 					width: 90%;
+
+					@media @tablet {
+						display: none;
+					}
 
 					li {
 						padding: 12px 6px;
@@ -126,90 +231,19 @@
 					}
 				}
 			}
+	
+			// Folder Open
+	
+			&.folder-open ul,
+			&.folder-open:hover ul {
+				display: block;
 
-			ul {
-				display: none;
-			}
-
-			@media @tablet {
-				border-bottom: none;
-			}
-
-			&.folder {
-				color: @font-swatch6-color;
-
-				&:after {
-					top: 22px;
-				}
-
-				.text {
-					color: @font-swatch6-color;
-					.transition(all, 0.5s, ease);
-					word-break: break-word;
+				@media @tablet {
+					display: block;
 				}
 			}
-
-			a {
-				.transition(all, 0.5s, ease);
-			}
 		}
 	}
-
-	a.pull {
-		opacity: .5;
-		position: absolute;
-		left: 360px;
-		top: 30px; 
-		display: inline-block;
-		width: 40px;
-		height: 40px;
-		overflow: hidden;
-		cursor: pointer;
-		outline: none;
-		.transition(all, 0.5s, ease);
-
-		&:hover {
-			opacity: 1;
-		}
-
-		@media @mobile {
-			left: 110%;
-			top: 25px;
-		}
-
-		&:after {
-			position: absolute;
-			width: 40px;
-			height: 40px;
-			content: '';
-			background-image: image('/images/ic-nav.svg');
-			background-size: 40px;
-			background-position: center center;
-			background-repeat: no-repeat;
-			background-color: transparent;
-
-			@media @tablet {
-				background-color: transparent!important;
-				box-shadow: none!important;
-			}
-		}
-	}
-
-	.bk-overlay {
-		width: 100%;
-	}
-}
-
-div.widget .extendednavigation ul, div.widget.extendednavigation ul {
-	display: block;
-
-	li {
-		display: block; 
-	}
-}
-
-div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
-	display: block!important;
 }
 
 // FEATURE
