@@ -743,11 +743,9 @@ form.blog-search-form .form-group button,
 // FORMS
 
 input,
-.widget.profile form fieldset input,
-.widget.signupform fieldset input,
-input.blog-search-input, .widget.signupform input,
-.widget.blogsearch input,
-.userregistration fieldset input,
+textarea,
+form input,
+form textarea,
 select {
 	border: 1px solid darken(@color-swatch2, 5%);
 	border-radius: 0;
@@ -1041,59 +1039,57 @@ select {
 	}
 }
 
-.widget {
-	&.contactform {
-		margin: 0 0 50px 0;
+.widget.contactform {
+	margin: 0 0 50px 0;
 
-		fieldset {
-			margin: 0;
-		}
-
-		label {
-			display: block;
-			font-family: @font-swatch5-font-family;
-			font-size: bkscale(@font-swatch5-font-size, 0.8);
-			font-weight: @font-swatch5-font-weight;
-			line-height: bkscale(@font-swatch5-line-height, 0.6);
-			margin: 0 0 15px;
-			text-transform: uppercase;
-			letter-spacing: .05em;
-		}
-
-		input, textarea {
-			margin-bottom: 25px;
-		}
-
-		button.btn {
-			@media @mobile {
-				width: 100%;
-			}
-		}
+	fieldset {
+		margin: 0;
 	}
 
-	&.signupform {
-		label {
-			display: block;
-			font-family: @font-swatch5-font-family;
-			font-size: bkscale(@font-swatch5-font-size, 0.8);
-			font-weight: @font-swatch5-font-weight;
-			line-height: bkscale(@font-swatch5-line-height, 0.6);
-			margin: 0 0 15px;
-			text-transform: uppercase;
-			letter-spacing: .05em;
-		}
-
-		button {
-			vertical-align: top;
-		}
+	label {
+		display: block;
+		font-family: @font-swatch5-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		font-weight: @font-swatch5-font-weight;
+		line-height: bkscale(@font-swatch5-line-height, 0.6);
+		margin: 0 0 15px;
+		text-transform: uppercase;
+		letter-spacing: .05em;
 	}
 
-	&.blogsearch {
-		margin: 20px 0;
+	input, textarea {
+		margin-bottom: 25px;
+	}
 
-		label {
-			display: block;
+	button.btn {
+		@media @mobile {
+			width: 100%;
 		}
+	}
+}
+
+.widget.signupform {
+	label {
+		display: block;
+		font-family: @font-swatch5-font-family;
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		font-weight: @font-swatch5-font-weight;
+		line-height: bkscale(@font-swatch5-line-height, 0.6);
+		margin: 0 0 15px;
+		text-transform: uppercase;
+		letter-spacing: .05em;
+	}
+
+	button {
+		vertical-align: top;
+	}
+}
+
+.widget.blogsearch {
+	margin: 20px 0;
+
+	label {
+		display: block;
 	}
 }
 
