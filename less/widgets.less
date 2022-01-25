@@ -400,185 +400,183 @@
 
 // SLIDESHOW
 
-.widget {
-	&.responsiveslideshow {
-		margin-top: 20px;
+.widget.responsiveslideshow {
+	margin-top: 20px;
 
-		.slideshow-widget-controls {
-			.dot {
-				height: 10px;
-				width: 10px;
-				margin: 0 5px;
-				background-color: transparent;
-				border: 1px solid @color-swatch1;
-				.border-radius(100px);
+	.slideshow-widget-controls {
+		.dot {
+			height: 10px;
+			width: 10px;
+			margin: 0 5px;
+			background-color: transparent;
+			border: 1px solid @color-swatch1;
+			.border-radius(100px);
+
+			.style--light & {
+				border-color: @color--accent;
+			}
+
+			.style--accent & {
+				border-color: @contrast--accent;
+			}
+
+			.style--dark & {
+				border-color: @color--accent;
+			}
+
+			&:hover {
+				background-color: fade(@color-swatch1, 20%);
+				cursor: pointer;
 
 				.style--light & {
-				    border-color: @color--accent;
+					background-color: fade(@color--accent, 20%);
 				}
 
 				.style--accent & {
-				    border-color: @contrast--accent;
+					background-color: fade(@contrast--accent, 20%);
 				}
 
 				.style--dark & {
-				    border-color: @color--accent;
+					background-color: fade(@color--accent, 20%);
+				}
+			}
+
+			&.selected {
+				background-color: @color-swatch1;
+				border: 0;
+
+				.style--light & {
+					background-color: @color--accent;
 				}
 
-				&:hover {
-					background-color: fade(@color-swatch1, 20%);
-					cursor: pointer;
-
-					.style--light & {
-					    background-color: fade(@color--accent, 20%);
-					}
-
-					.style--accent & {
-					    background-color: fade(@contrast--accent, 20%);
-					}
-
-					.style--dark & {
-					    background-color: fade(@color--accent, 20%);
-					}
+				.style--accent & {
+					background-color: @contrast--accent;
 				}
 
-				&.selected {
-					background-color: @color-swatch1;
-					border: 0;
-
-					.style--light & {
-					    background-color: @color--accent;
-					}
-
-					.style--accent & {
-					    background-color: @contrast--accent;
-					}
-
-					.style--dark & {
-					    background-color: @color--accent;
-					}
+				.style--dark & {
+					background-color: @color--accent;
 				}
 			}
 		}
+	}
 
-		.content-wrapper {
-			background-color: fade(@color-swatch1, 75%);
-			top: initial;
-			display: inline-block;
-			min-height: 50px;
-			height: auto;
-			max-width: 65%;
-			left: 15px;
-			right: auto;
-			max-width: 80%;
-			bottom: 15px;
+	.content-wrapper {
+		background-color: fade(@color-swatch1, 75%);
+		top: initial;
+		display: inline-block;
+		min-height: 50px;
+		height: auto;
+		max-width: 65%;
+		left: 15px;
+		right: auto;
+		max-width: 80%;
+		bottom: 15px;
 
-			span {
-				color: @color-swatch5;
-				padding: 10px 4px 0 10px; 
+		span {
+			color: @color-swatch5;
+			padding: 10px 4px 0 10px; 
 
-				@media @mobile {
-					padding-right: 10px;
-				}
+			@media @mobile {
+				padding-right: 10px;
+			}
 
-				&:last-child {
-					padding-right: 10px;
-				}
+			&:last-child {
+				padding-right: 10px;
+			}
 
-				&.title {
-					font-weight: @font-swatch2-font-weight;
-				}
+			&.title {
+				font-weight: @font-swatch2-font-weight;
 			}
 		}
+	}
 
-		.slideshow-widget {
-			.btn-play {
-				background-color: transparent;
-				height: 75px;
+	.slideshow-widget {
+		.btn-play {
+			background-color: transparent;
+			height: 75px;
+			width: 75px;
+			left: 50%;
+			top: 50%;
+			opacity: .8;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
 				width: 75px;
-				left: 50%;
-				top: 50%;
-				opacity: .8;
-				transform: translate(-50%, -50%);
-				-webkit-transform: translate(-50%, -50%);
-
-				&:hover {
-					opacity: 1;
-				}
-
-				&:after {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 75px;
-					height: 75px;
-					content: '';
-					background-image: image('/images/slideshow-play.svg');
-					background-size: 70px;
-					background-position: center center;
-					background-repeat: no-repeat;
-				}
-
-				&.pause:after {
-					background-image: image('/images/slideshow-pause.svg');
-				}
+				height: 75px;
+				content: '';
+				background-image: image('/images/slideshow-play.svg');
+				background-size: 70px;
+				background-position: center center;
+				background-repeat: no-repeat;
 			}
 
-			.btn-prev, .btn-next {
-				background-color: transparent;
-				height: 50px;
+			&.pause:after {
+				background-image: image('/images/slideshow-pause.svg');
+			}
+		}
+
+		.btn-prev, .btn-next {
+			background-color: transparent;
+			height: 50px;
+			width: 50px;
+			text-indent: 1000px;
+			overflow: hidden;
+			opacity: .8;
+			top: 50%;
+			transform: translate(0, -50%);
+			-webkit-transform: translate(0, -50%);
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
 				width: 50px;
-				text-indent: 1000px;
-				overflow: hidden;
-				opacity: .8;
-				top: 50%;
-				transform: translate(0, -50%);
-				-webkit-transform: translate(0, -50%);
+				height: 50px;
+				text-indent: 0;
+			}
+		}
 
-				&:hover {
-					opacity: 1;
-				}
+		.btn-prev {
+			left: 20px;
 
-				&:before {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 50px;
-					height: 50px;
-					text-indent: 0;
-				}
+			&:before {
+				content: '';
+				background-image: image('/images/slideshow-arrow-left.svg');
+				background-size: 40px;
+				background-position: center center;
+				background-repeat: no-repeat;
 			}
 
-			.btn-prev {
-				left: 20px;
+			@media @tablet {
+				left: 10px;
+			}
+		}
 
-				&:before {
-					content: '';
-					background-image: image('/images/slideshow-arrow-left.svg');
-					background-size: 40px;
-					background-position: center center;
-					background-repeat: no-repeat;
-				}
+		.btn-next {
+			right: 20px;
 
-				@media @tablet {
-					left: 10px;
-				}
+			&:before {
+				content: '';
+				background-image: image('/images/slideshow-arrow-right.svg');
+				background-size: 40px;
+				background-position: center center;
+				background-repeat: no-repeat;
 			}
 
-			.btn-next {
-				right: 20px;
-
-				&:before {
-					content: '';
-					background-image: image('/images/slideshow-arrow-right.svg');
-					background-size: 40px;
-					background-position: center center;
-					background-repeat: no-repeat;
-				}
-
-				@media @tablet {
-					right: 10px;
-				}
+			@media @tablet {
+				right: 10px;
 			}
 		}
 	}
