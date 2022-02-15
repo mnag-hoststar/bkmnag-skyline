@@ -934,6 +934,7 @@ label {
 	margin: 0 0 15px;
 	text-transform: uppercase;
 	letter-spacing: .05em;
+    word-break: break-word;
 }
 
 textarea {
@@ -1187,15 +1188,18 @@ select {
 
 .select-wrap {
 	position: relative;
-	max-width: 50%;
 
-	@media @mobile {
-		max-width: 100%;
-	}
+    .advancedcontactform & {
+        max-width: 50%;
 
-	.responsivecolumns & {
-		max-width: 100%;
-	}
+        @media @tablet {
+            max-width: 100%;
+        }
+    
+        .responsivecolumns & {
+            max-width: 100%;
+        }
+    }
 }
 
 select {
