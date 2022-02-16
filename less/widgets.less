@@ -440,20 +440,17 @@
             color: @font-swatch7-color;
 
             .style--light & {
-                background-color: @color--accent;
-                border-color: darken(@color--accent, 10%);
-                color: @contrast--accent;
+                background-color: @font-swatch7-background-color;
+                color: @font-swatch7-color;
             }
         
             .style--accent & {
                 background-color: @color--dark;
-                border-color: darken(@color--dark, 10%);
                 color: @contrast--dark;
             }
         
             .style--dark & {
                 background-color: @color--accent;
-                border-color: darken(@color--accent, 10%);
                 color: @contrast--accent;
             }
 
@@ -461,7 +458,7 @@
                 background-color: @font-swatch7-background-color-hover;
 
                 .style--light & {
-                    background-color: darken(@color--accent, 10%);
+					background-color: @font-swatch7-background-color-hover;
                 }
 
                 .style--accent & {
@@ -484,7 +481,7 @@
 				margin-left: -5px;
 
                 .style--light & {
-                    color: @contrast--accent;
+					color: @font-swatch7-color;
                 }
             
                 .style--accent & {
@@ -509,7 +506,7 @@
 				border-left: 15px solid @font-swatch7-color;
 
                 .style--light & {
-                    border-color: @contrast--accent;
+                    border-color: @font-swatch7-color;
                 }
             
                 .style--accent & {
@@ -531,7 +528,7 @@
 				border-right: 3px solid @font-swatch7-color;
 
                 .style--light & {
-                    border-color: @contrast--accent;
+                    border-color: @font-swatch7-color;
                 }
             
                 .style--accent & {
@@ -557,7 +554,7 @@
 				height: 8px;
 
                 .style--light & {
-                    border-color: @contrast--accent;
+                    border-color: @font-swatch7-color;
                 }
             
                 .style--accent & {
@@ -601,7 +598,7 @@
 			.border-radius(100px);
 
 			.style--light & {
-				border-color: @color--accent;
+				border-color: @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -617,7 +614,7 @@
 				cursor: pointer;
 
 				.style--light & {
-					background-color: fade(@color--accent, 20%);
+					background-color: fade(@font-swatch7-background-color, 20%);
 				}
 
 				.style--accent & {
@@ -634,7 +631,7 @@
 				border: 0;
 
 				.style--light & {
-					background-color: @color--accent;
+					background-color: @font-swatch7-background-color;
 				}
 
 				.style--accent & {
@@ -688,8 +685,8 @@ form.blog-search-form .form-group button,
 	.transition( all, 0.5s, ease);
 
 	.style--light & {
-	    background-color: @color--accent;
-	    color: @contrast--accent;
+	    background-color: @font-swatch7-background-color;
+	    color: @font-swatch7-color;
 	}
 
 	.style--accent & {
@@ -709,18 +706,15 @@ form.blog-search-form .form-group button,
 		.border-radius(0px);
 
 		.style--light & {
-		    background-color: @color--dark;
-		    color: @contrast--dark;
+		    background-color: @font-swatch7-background-color-hover;
 		}
 
 		.style--accent & {
 		    background-color: darken(@color--dark, 20%);
-		    color: @contrast--dark;
 		}
 
 		.style--dark & {
 		    background-color: darken(@color--accent, 20%);
-		    color: @contrast--accent;
 		}
 	}
 }
@@ -729,7 +723,7 @@ form.blog-search-form .form-group button,
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @contrast--accent;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {
@@ -953,8 +947,26 @@ select {
 	background-color: @color-swatch1;
 	height: 40px;
 	width: 70%;
-	color: @font-swatch5-color;
+	color: fade(@font-swatch5-color, 80%);
 	.transition( all, 0.3s, ease);
+
+	.style--light & {
+		border-color: darken(@color-swatch2, 5%);
+		background-color: @color-swatch1;
+	    color: fade(@font-swatch5-color, 80%);
+	}
+
+	.style--accent & {
+		border-color: darken(@color--accent, 10%);
+		background-color: @color--light;
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--dark & {
+		border-color: darken(@color--dark, 10%);
+		background-color: @color--light;
+	    color: fade(@contrast--light, 80%);
+	}
 	
 	@media @mobile {
 		width: 100%;
@@ -964,30 +976,12 @@ select {
 		width: 100%;
 	}
 
-	.style--light & {
-		background-color: @color--light;
-		border-color: darken(@color--light, 10%);
-	    color: fade(@contrast--light, 80%);
-	}
-
-	.style--accent & {
-		background-color: @color--light;
-		border-color: darken(@color--accent, 10%);
-	    color: fade(@contrast--light, 80%);
-	}
-
-	.style--dark & {
-		background-color: @color--light;
-		border-color: darken(@color--dark, 10%);
-	    color: fade(@contrast--light, 80%);
-	}
-
 	&:hover {
 		border: 1px solid darken(@color-swatch2, 15%);
 		.transition( all, 0.3s, ease);
 
 		.style--light & {
-			border-color: darken(@color--light, 15%);
+			border-color: darken(@color-swatch2, 15%);
 		}
 
 		.style--accent & {
@@ -1003,7 +997,7 @@ select {
 		border: 1px solid darken(@color-swatch2, 25%);
 
 		.style--light & {
-			border-color: darken(@color--light, 25%);
+			border-color: darken(@color-swatch2, 15%);
 		}
 
 		.style--accent & {
@@ -1075,18 +1069,6 @@ select {
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
-
-		.style--light & {
-			color: @contrast--light;
-		}
-
-		.style--accent & {
-			color: @contrast--accent;
-		}
-
-		.style--dark & {
-			color: @contrast--dark;
-		}
 			
 		&:before,
 		&:after {
@@ -1107,7 +1089,7 @@ select {
 			border: 1px solid @font-swatch7-background-color;
 
 			.style--light & {
-				border-color: @color--accent;
+				border-color: @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1139,8 +1121,8 @@ select {
 			transform: scale(50%);
 
 			.style--light & {
-				background-color: @color--accent;
-				border: 1px solid @color--accent;
+				background-color: @font-swatch7-background-color;
+				border: 1px solid @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1165,7 +1147,7 @@ select {
 			transform: scale(50%) rotate(45deg);
 
 			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
+				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1328,11 +1310,11 @@ select {
 	}
 
 	p {
-		color: @color-swatch4;
+		color: fade(@color-swatch4, 80%);
 		padding: 0;
 
 		.style--light & {
-		    color: fade(@contrast--light, 80%);
+		    color: fade(@color-swatch4, 80%);
 		}
 
 		.style--accent & {
@@ -1367,7 +1349,7 @@ select {
 			letter-spacing: @font-swatch5-letter-spacing;
 
 			.style--light & {
-			    color: fade(@contrast--light, 80%);
+			    color: @color-swatch3;
 			}
 
 			.style--accent & {
@@ -1384,7 +1366,7 @@ select {
 			text-decoration: none;
 
 			.style--light & {
-			    color: @contrast--light;
+			    color: darken(@color-swatch3, 20%);
 			}
 
 			.style--accent & {
@@ -1400,7 +1382,7 @@ select {
 			color: darken(@color-swatch3, 20%);
 
 			.style--light & {
-	    		color: @contrast--light;
+	    		color: darken(@color-swatch3, 20%);
 			}
 
 			.style--accent & {
@@ -1419,7 +1401,7 @@ select {
 				text-decoration: none;
 
 				.style--light & {
-		    		color: @contrast--light;
+		    		color: darken(@color-swatch3, 20%);
 				}
 
 				.style--accent & {
@@ -1458,7 +1440,7 @@ hr.line {
 	margin: 0;
 
 	.style--light & {
-	    color: darken(@color--light, 10%);
+	    color: fade(@color-swatch6, 10%);
 	}
 
 	.style--accent & {
