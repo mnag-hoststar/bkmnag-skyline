@@ -234,28 +234,7 @@
 				}
 			}
 			
-			div.blog-post-category {
-				border-bottom: 1px solid lighten(@color-swatch5, 20%);
-				float: right;
-				width: 30%;
-				padding: 1em 0;
-
-				@media @tablet {
-					float: none;
-					width: auto;
-				}
-
-				@media @mobile {
-					padding: 0.5em 0;
-				}
-
-				.blog-post-category-label {
-					&:after {
-						content: ": ";
-					}
-				}
-			}
-			
+			div.blog-post-category,
 			.blog-post-tags {
 				float: right;
 				width: 30%;
@@ -269,23 +248,24 @@
 				@media @mobile {
 					padding: 0.5em 0;
 				}
-
-				.blog-post-tags-label {
-					&:after {
-						content: ": ";
-					}
+						
+				&:after {
+					content: ',\00a0';
+				}
+			
+				&:last-child:after {
+					content: none;
 				}
 
-				ol.blog-post-tags-list {
-					.blog-post-tag {
-						a {
-							margin-left: 4px;
-							
-							&:after {
-								content: ",";
-							}
-						}
-					}
+				a {
+					margin-left: 4px;
+				}
+			}
+
+			.blog-post-category-label,
+			.blog-post-tags-label {
+				&:after {
+					content: ':\00a0';
 				}
 			}
 		}
@@ -532,6 +512,10 @@ button.btn.googleplus {
 	margin: 0 0 60px;
 	padding: 0 10px;
 	overflow: auto;
+
+	a:hover {
+		text-decoration: none;
+	}
 	
 	@media @tablet {
 		width: 100%/2;
@@ -557,6 +541,13 @@ button.btn.googleplus {
 .widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image-wrap {
 	background-color: transparent;
 	background-position: center;
+}
+
+.widget.ecomproductslist .ecom-productslist-image,
+.widget.ecomfeaturedproducts .ecom-featuredproducts-wrap .ecom-featuredproducts-product .ecom-featuredproducts-image {
+	display: none;
+    height: 100%;
+    margin: 0 auto;
 }
 
 // Title
@@ -603,7 +594,9 @@ button.btn.googleplus {
 		}
 
 		.btn {
-			margin: 20px 20px 0 0;
+			margin: 20px 0 0;
+			text-align: center;
+			min-width: 250px;
 	
 			&.ecom-product-add-to-cart-btn .text:before {
 				display: none;
@@ -636,6 +629,33 @@ button.btn.googleplus {
 			&:before {
 				float: none;
 			}
+		}
+	}
+
+    .ecom-product-tag,
+    .ecom-product-category {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1em;
+
+        &:after {
+            content: ':\00a0';
+            order: 0;
+            display: inline-block;
+        }
+    }
+
+	.store-category-link,
+	.ecom-product-tag-link {
+		font-weight: 300;
+        order: 1;
+
+		&:after {
+			content: ',\00a0';
+		}
+
+		&:last-child::after {
+			content: none;
 		}
 	}
 }
