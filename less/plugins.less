@@ -372,6 +372,10 @@ button.btn.googleplus {
                     @media @mobile {
 						max-width: none;
                     }
+                                
+                    .responsivecolumns & {
+						max-width: none;
+                    }
 				}
 
                 button.btn {
@@ -521,7 +525,19 @@ button.btn.googleplus {
 .widget.ecomproductslist .ecom-productlist-price,
 .widget.ecomfeaturedproducts .ecom-featuredproducts-price {
 	display: block;
-	color: lighten(@color-swatch5, 20%);
+	color: fade(@font-swatch5-color, 80%);
+
+	.style--light & {
+		color: fade(@font-swatch5-color, 80%);
+	}
+
+	.style--accent & {
+		color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+		color: fade(@contrast--dark, 80%);
+	}
 }
 
 // Single Product

@@ -822,7 +822,7 @@ form.blog-search-form .form-group button,
 	text-decoration: none;
 	padding: 8px 40px;
 	min-height: 40px;
-	height: auto !important;
+	height: auto;
 	min-width: 120px;
 	border: none;
 	text-align: center;
@@ -943,7 +943,6 @@ form.blog-search-form .form-group button,
 	
 	span {
 		a {
-			opacity: 0.6;
 			background-image: none;
 			background-color: transparent;
 			margin: 0 5px 10px;
@@ -1052,7 +1051,8 @@ select,
 	text-indent: 14px;
 	-webkit-appearance: none;
 	background-color: @color-swatch1;
-	height: 40px;
+	min-height: 40px;
+	height: auto !important;
 	color: fade(@font-swatch5-color, 80%);
 	.transition( all, 0.3s, ease);
 
