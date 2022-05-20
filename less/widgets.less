@@ -241,7 +241,10 @@
 						transition: height 0.25s ease-in-out, border 0.25s ease-in-out, opacity 0.25s ease-in-out;
 	
 						@media @tablet {
-							display: block;
+							display: none;
+							position: static;
+							min-width: auto;
+							max-width: none;
 						}
 	
 						li {
@@ -798,6 +801,7 @@ button.button,
 .advancedcontactform button.btn,
 .widget.tweet a,
 .widget.clicktocall a,
+.widget.clicktocall a:hover,
 .widget.dropbox button,
 .widget.filedownload button.btn,
 .widget.paypalbuynow .widget.button.paypal,
@@ -951,6 +955,7 @@ form.blog-search-form .form-group button,
 			height: 45px;
 			min-height: 45px;
 			min-width: 45px;
+			line-height: 45px;
 			border-radius: 50%;
 			text-indent: 0;
 			font-size: 0;
@@ -1036,10 +1041,6 @@ label, .label {
     word-break: break-word;
 }
 
-textarea {
-	height: auto;
-}
-
 input,
 textarea,
 form input,
@@ -1104,7 +1105,8 @@ select,
 	}
 }
 
-textarea {
+textarea,
+form textarea {
 	min-height: 120px;
 }
 
