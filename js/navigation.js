@@ -7,5 +7,4 @@ $(document).ready(function() {
 	$(".extendednavigation > ul > li").click(function() {
 		$(this).siblings(".extendednavigation > ul > li.folder").removeClass("folder-open");
 	});
-
 });

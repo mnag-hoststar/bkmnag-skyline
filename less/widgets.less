@@ -233,12 +233,9 @@
 						border: 2px solid transparent;
 						background-color: transparent;
 						position: relative;
-						margin: 5px;
-						margin-top: 1em;
 						width: auto;
 						height: 0;
 						color: @font-swatch6-color-hover;
-						transition: height 0.25s ease-in-out, border 0.25s ease-in-out, opacity 0.25s ease-in-out;
 	
 						@media @tablet {
 							display: none;
@@ -272,8 +269,11 @@
 				&.folder-open:hover ul {
 					display: block;
 					opacity: 1;
+					margin: 5px;
+					margin-top: 1em;
 					border: 2px solid fade(@color-swatch1, 10%);
 					height: 100%;
+					transition: height 0.25s ease-in-out, border 0.25s ease-in-out, opacity 0.25s ease-in-out;
 	
 					@media @tablet {
 						display: block;
