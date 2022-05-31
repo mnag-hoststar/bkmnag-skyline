@@ -1354,41 +1354,22 @@ select {
 
 // TWITTER
 
+.widget.profile,
 .widget.twitter {
     margin: 2em 0;
 	padding: 0;
 
-	ul {
+	ul.twitter {
 		padding: 0px;
 		margin: 0;
 
 		.twitter-profile-pic {
+			display: block;
 			float: left;
 			margin-right: 20px;
 		
 			a:hover {
 				border-bottom: 0;
-			}
-		}
-	
-		.twitter-content {
-			margin-left: 68px;
-	
-			span.bk-full-name {
-				font-family: @font-swatch4-font-family;
-                color: @color-swatch6;
-    
-                .style--light & {
-                    color: @color-swatch6;
-                }
-            
-                .style--accent & {
-                    color: @color--dark;
-                }
-            
-                .style--dark & {
-                    color: @color--accent;
-                }
 			}
 		}
 		
@@ -1436,6 +1417,26 @@ select {
 			}
 
             .twitter-content {
+				margin-left: 68px;
+
+				span.bk-full-name {
+					display: block;
+					font-family: @font-swatch4-font-family;
+					color: @color-swatch6;
+		
+					.style--light & {
+						color: @color-swatch6;
+					}
+				
+					.style--accent & {
+						color: @color--dark;
+					}
+				
+					.style--dark & {
+						color: @color--accent;
+					}
+				}
+
                 > a:first-child,
                 > p {
                     display: block;
@@ -1454,6 +1455,7 @@ select {
                 time,
                 time + span,
                 span + p {
+					display: inline-block;
 					opacity: 0.6;
                     margin-bottom: 0;
                     padding: 0;
@@ -1474,19 +1476,23 @@ select {
 					}
                 }
                 
-                time + span + span a {
-					color: @color-swatch6;
-	
-					.style--light & {
+                time + span + span {
+						display: inline-block;
+						
+						a {
 						color: @color-swatch6;
-					}
+		
+						.style--light & {
+							color: @color-swatch6;
+						}
+						
+						.style--accent & {
+							color: @color--dark;
+						}
 					
-					.style--accent & {
-						color: @color--dark;
-					}
-				
-					.style--dark & {
-						color: @color--accent;
+						.style--dark & {
+							color: @color--accent;
+						}
 					}
                 }
             }
