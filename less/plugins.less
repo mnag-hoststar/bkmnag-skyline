@@ -213,6 +213,10 @@
 				&:last-child:after {
 					content: none;
 				}
+
+				a {
+					word-break: break-word;
+				}
 			}
 
 			.blog-post-tags {
@@ -549,6 +553,8 @@ button.btn.googleplus {
 
 .widget.ecomproduct {
 	.ecom-product {
+		padding-bottom: 40px;
+
 		&-title {
 			font-size: @font-swatch2-font-size;
 			margin-top: 10px;
@@ -621,6 +627,8 @@ button.btn.googleplus {
 		.ecom-product-tag-link {
 			font-weight: 300;
 			order: 1;
+			overflow-wrap: break-word;
+			max-width: 100%;
 	
 			&:last-child::after {
 				content: none;
